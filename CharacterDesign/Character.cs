@@ -107,6 +107,37 @@ namespace CharacterDesign
 
         public void BackgroundMale()
         {
+            bool check = false;
+            do
+            {
+                Console.Write(" Character Origins");
+                Console.WriteLine("------------------");
+                Console.WriteLine("1. The Hustler | 2. The Playboy | 3. ");
+
+                var select = Console.ReadLine();
+
+                if (select == "1")
+                {
+                    Console.WriteLine("Born an orphan into the dark slums previously known as the great City of New York." +
+                        "\nYou have only known pain and suffering as you struggled to survive each and every day. " +
+                        "Taken in by a family destroyed by the \"Veggious Plague," + "you lived a troubled childhood" +
+                        " hustling and trading whatever you could for food.  Your years of hardship have led you " +
+                        "to become the most well-known hustler in the slums of NYC. " +
+                        "Recently, you acquired a merchant ship to a mis-placed former client. " +
+                        "Eager to escape and explore the stars you forever looked too in your youth. " +
+                        "You now prepare for your journey to travel and trade amongst the stars.");
+                    check = true;
+                }
+                else if (select == "2")
+                {
+                    check = true;
+                }
+
+                else if (select == "3")
+                {
+                    check = true;
+                }
+            }while (check == false);
 
         }
 

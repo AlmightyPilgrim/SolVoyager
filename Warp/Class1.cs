@@ -8,6 +8,9 @@ namespace Warp
 {
     public class WarpSpeed
     {
+        double v;
+        double w;
+
     }
 
     public class Travel

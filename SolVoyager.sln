@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Currency", "Currency\Curren
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vessel", "Vessel\Vessel.csproj", "{A7ABF8AE-06AA-4971-8D19-A528F28AE3D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpeningTitlePage", "OpeningTitlePage\OpeningTitlePage.csproj", "{AE38EB8A-A7DF-4274-87FC-D596CCDE6B67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{A7ABF8AE-06AA-4971-8D19-A528F28AE3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7ABF8AE-06AA-4971-8D19-A528F28AE3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7ABF8AE-06AA-4971-8D19-A528F28AE3D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE38EB8A-A7DF-4274-87FC-D596CCDE6B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE38EB8A-A7DF-4274-87FC-D596CCDE6B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE38EB8A-A7DF-4274-87FC-D596CCDE6B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE38EB8A-A7DF-4274-87FC-D596CCDE6B67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

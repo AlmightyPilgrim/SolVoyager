@@ -48,15 +48,19 @@ namespace CharacterDesign
                 switch (y)
                 {
                     case "1":
+                        Console.WriteLine("You have brown hair.");
                         check = true;
                         break;
                     case "2":
+                        Console.WriteLine("You have scarlett hair.");
                         check = true;
                         break;
                     case "3":
+                        Console.WriteLine("You have black hair.");
                         check = true;
                         break;
                     case "4":
+                        Console.WriteLine("You have white hair.");
                         check = true;
                         break;
                     default:
@@ -78,15 +82,19 @@ namespace CharacterDesign
                 switch (z)
                 {
                     case "1":
+                        Console.WriteLine("You have brown eyes.");
                         check = true;
                         break;
                     case "2":
+                        Console.WriteLine("You have red eyes.");
                         check = true;
                         break;
                     case "3":
+                        Console.WriteLine("You have blue eyes.");
                         check = true;
                         break;
                     case "4":
+                        Console.WriteLine("You have grey eyes.");
                         check = true;
                         break;
                     default:

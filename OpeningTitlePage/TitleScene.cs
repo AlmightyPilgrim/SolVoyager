@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Currency
+namespace OpeningTitlePage
 {
-    public class Creds
+    public class TitleScene
     {
     }
 }

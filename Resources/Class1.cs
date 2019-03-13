@@ -3,24 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Currency;
 
 namespace Resources
 {
     public class Metals
     {
-        public void Platinium()
+        Creds creditResources = new Creds();
+        public void Platinium() // will have a modifier 
         {
-            Console.WriteLine("One of the better metals available, not as rare as palladium, though better for different projects.");
+            Console.WriteLine("One of the better metals available, not as rare as palladium, though better for different projects." +
+                "The base modifier for platinium 3");
+            int metalModifier = 3;
+            creditResources.MetalCreds(metalModifier);
         }
 
         public void Palladium()
         {
-
+            int metalModifier = 4;
+            creditResources.MetalCreds(metalModifier);
         }
 
         public void Titanium()
         {
-
+            int metalModifier = 2;
+            creditResources.MetalCreds(metalModifier);
         }
     }
 

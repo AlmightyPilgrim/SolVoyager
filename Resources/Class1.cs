@@ -15,6 +15,11 @@ namespace Resources
 
     }
 
+    public class Gemstones
+    {
+
+    }
+
     public class Supplies
     {
 

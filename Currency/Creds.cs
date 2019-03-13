@@ -11,7 +11,7 @@ namespace Currency
         int crate = 100; 
         public int MetalCreds(int chosenMetal) //metal gets a base modifier of 2
         {
-            // crateNumber *= crate; --- This is or when number of crates are more than 1
+            // crateNumber *= crate; --- This is or when number of crates are more than 1 (MIGHT NOT BE NECESSARY)
             int metal = crate * 2;
             chosenMetal *= metal;
             Console.WriteLine($"{chosenMetal} credits for amount.");

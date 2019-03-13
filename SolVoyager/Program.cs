@@ -17,9 +17,12 @@ namespace SolVoyager
         static void Main(string[] args)
         {
             string x = "blah";
-            var y = 1;
+            int y = 1;
             Character testCharacter = new Character();
             testCharacter.BackgroundMale();
+            Metals testMetals = new Metals();
+            testMetals.Platinium();
+            
             testCharacter.Gender(x);
             testCharacter.Eyes(x);
             testCharacter.Name(x);

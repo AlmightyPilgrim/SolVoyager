@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vessel", "Vessel\Vessel.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpeningTitlePage", "OpeningTitlePage\OpeningTitlePage.csproj", "{AE38EB8A-A7DF-4274-87FC-D596CCDE6B67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomEvents", "RandomEvents\RandomEvents.csproj", "{E4212367-EE29-4F7C-B388-4AC6EF023F50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{AE38EB8A-A7DF-4274-87FC-D596CCDE6B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE38EB8A-A7DF-4274-87FC-D596CCDE6B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE38EB8A-A7DF-4274-87FC-D596CCDE6B67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4212367-EE29-4F7C-B388-4AC6EF023F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4212367-EE29-4F7C-B388-4AC6EF023F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4212367-EE29-4F7C-B388-4AC6EF023F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4212367-EE29-4F7C-B388-4AC6EF023F50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

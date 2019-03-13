@@ -206,7 +206,80 @@ namespace CharacterDesign
 
         public void BackgroundFemale()
         {
+            bool check = false;
+            do
+            {
+                Console.Clear();
+                Console.Write(" Character Origins");
+                Console.WriteLine("------------------");
+                Console.WriteLine("1.  | 2.  | 3. ");
 
+                var select = Console.ReadLine();
+
+                if (select == "1")
+                {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("story");
+                    Console.ResetColor();
+
+                    Console.WriteLine("\nB: Back | Enter: Select Character");
+                    var selectCharacter = Console.ReadLine();
+
+                    if (selectCharacter == "b")
+                    {
+                        check = false;
+                    }
+
+                    if (selectCharacter == "Enter")
+                    {
+                        check = true;
+                    }
+                }
+                else if (select == "2")
+                {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("story");
+                    Console.ResetColor();
+                    Console.WriteLine("\nB: Back | Enter: Select Character");
+                    var selectCharacter = Console.ReadLine();
+
+                    if (selectCharacter == "b")
+                    {
+                        check = false;
+                    }
+
+                    if (selectCharacter == "Enter")
+                    {
+
+
+                        check = true;
+                    }
+
+                }
+
+                else if (select == "3")
+                {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("story");
+                    Console.ResetColor();
+                    Console.WriteLine("\nB: Back | Enter: Select Character");
+                    var selectCharacter = Console.ReadLine();
+
+                    if (selectCharacter == "b")
+                    {
+                        check = false;
+                    }
+
+                    if (selectCharacter == "Enter")
+                    {
+                        check = true;
+                    }
+
+                }
+            } while (check == false);      
         }
 
         public void StarterGemstone()

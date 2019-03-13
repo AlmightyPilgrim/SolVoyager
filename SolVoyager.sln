@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planets", "Planets\Planets.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warp", "Warp\Warp.csproj", "{78A46D46-8943-4065-B39F-F97C6995EF32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Currency", "Currency\Currency.csproj", "{BA3CD0F9-5EF4-4B54-9FF9-5131A3928013}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vessel", "Vessel\Vessel.csproj", "{A7ABF8AE-06AA-4971-8D19-A528F28AE3D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{78A46D46-8943-4065-B39F-F97C6995EF32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78A46D46-8943-4065-B39F-F97C6995EF32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78A46D46-8943-4065-B39F-F97C6995EF32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3CD0F9-5EF4-4B54-9FF9-5131A3928013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3CD0F9-5EF4-4B54-9FF9-5131A3928013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3CD0F9-5EF4-4B54-9FF9-5131A3928013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3CD0F9-5EF4-4B54-9FF9-5131A3928013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7ABF8AE-06AA-4971-8D19-A528F28AE3D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7ABF8AE-06AA-4971-8D19-A528F28AE3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7ABF8AE-06AA-4971-8D19-A528F28AE3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7ABF8AE-06AA-4971-8D19-A528F28AE3D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

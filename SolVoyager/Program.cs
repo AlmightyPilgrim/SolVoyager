@@ -19,6 +19,8 @@ namespace SolVoyager
             string x = "blah";
             Character testCharacter = new Character();
             testCharacter.Gender(x);
+            testCharacter.Eyes(x);
+            testCharacter.Name(x);
         }
     }
 }

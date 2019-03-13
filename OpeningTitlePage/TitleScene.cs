@@ -4,17 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Warp
+namespace OpeningTitlePage
 {
-    public class WarpSpeed
+    public class TitleScene
     {
-        double v;
-        double w;
-
-    }
-
-    public class Travel
-    {
-
     }
 }

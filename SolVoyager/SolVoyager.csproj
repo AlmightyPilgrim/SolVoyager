@@ -49,5 +49,31 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CharacterDesign\CharacterDesign.csproj">
+      <Project>{c93716d1-a212-4b48-8899-039335fc1544}</Project>
+      <Name>CharacterDesign</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Currency\Currency.csproj">
+      <Project>{ba3cd0f9-5ef4-4b54-9ff9-5131a3928013}</Project>
+      <Name>Currency</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Planets\Planets.csproj">
+      <Project>{d8c288e5-6bb4-4f04-bfe0-8c2054732b3b}</Project>
+      <Name>Planets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resources\Resources.csproj">
+      <Project>{6a6d25c0-c839-45d8-ac5b-0b255fab6b9a}</Project>
+      <Name>Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vessel\Vessel.csproj">
+      <Project>{a7abf8ae-06aa-4971-8d19-a528f28ae3d5}</Project>
+      <Name>Vessel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warp\Warp.csproj">
+      <Project>{78a46d46-8943-4065-b39f-f97c6995ef32}</Project>
+      <Name>Warp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

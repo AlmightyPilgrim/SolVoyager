@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Currency;
+using Resources;
+using Planets;
+using Warp;
+using Vessel;
+using CharacterDesign;
 
 namespace SolVoyager
 {
@@ -10,6 +16,9 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
+            string x
+            Character testCharacter = new Character();
+            testCharacter.Gender();
         }
     }
 }

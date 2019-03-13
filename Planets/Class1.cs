@@ -8,6 +8,7 @@ namespace Planets
 {
     public class Earth
     {
+
     }
 
     public class Mars

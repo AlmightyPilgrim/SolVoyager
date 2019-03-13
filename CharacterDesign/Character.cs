@@ -23,12 +23,17 @@ namespace CharacterDesign
             return z;
         }
 
+        public string Name(string name)
+        {
+            return name;
+        }
+
         public void Background()
         {
 
         }
 
-        public void Gemstone()
+        public void StarterGemstone()
         {
         }
     }

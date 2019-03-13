@@ -38,11 +38,14 @@ namespace CharacterDesign
 
         public string Eyes(string z)
         {
+            Console.WriteLine("Character Eye color:\n1 - ");
             return z;
         }
 
         public string Name(string name)
         {
+            Console.WriteLine("Enter your characters name");
+            name = Console.ReadLine();
             return name;
         }
 

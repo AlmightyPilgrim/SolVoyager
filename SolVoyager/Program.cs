@@ -16,9 +16,9 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
-            string x
+            string x = "blah";
             Character testCharacter = new Character();
-            testCharacter.Gender();
+            testCharacter.Gender(x);
         }
     }
 }

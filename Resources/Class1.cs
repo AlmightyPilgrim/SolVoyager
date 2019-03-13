@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Resources
 {
-    public class Class1
+    public class Metals
     {
+    }
+
+    public class Fabric
+    {
+
+    }
+
+    public class Supplies
+    {
+
     }
 }

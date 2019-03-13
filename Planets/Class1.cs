@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace Planets
 {
-    public class Class1
+    public class Earth
     {
+    }
+
+    public class Mars
+    {
+
+    }   
+    
+    public class MiningColony
+    {
+
+    }
+
+    public class AlphaCentari
+    {
+
     }
 }

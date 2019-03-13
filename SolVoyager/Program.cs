@@ -22,7 +22,7 @@ namespace SolVoyager
             testCharacter.BackgroundMale();
             Metals testMetals = new Metals();
             testMetals.Platinium();
-            
+            y += 1;
             testCharacter.Gender(x);
             testCharacter.Eyes(x);
             testCharacter.Name(x);

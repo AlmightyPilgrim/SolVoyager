@@ -28,7 +28,12 @@ namespace CharacterDesign
             return name;
         }
 
-        public void Background()
+        public void BackgroundMale()
+        {
+
+        }
+
+        public void BackgroundFemale()
         {
 
         }

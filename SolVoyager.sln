@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Reso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planets", "Planets\Planets.csproj", "{D8C288E5-6BB4-4F04-BFE0-8C2054732B3B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warp", "Warp\Warp.csproj", "{78A46D46-8943-4065-B39F-F97C6995EF32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D8C288E5-6BB4-4F04-BFE0-8C2054732B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8C288E5-6BB4-4F04-BFE0-8C2054732B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8C288E5-6BB4-4F04-BFE0-8C2054732B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A46D46-8943-4065-B39F-F97C6995EF32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A46D46-8943-4065-B39F-F97C6995EF32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A46D46-8943-4065-B39F-F97C6995EF32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A46D46-8943-4065-B39F-F97C6995EF32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

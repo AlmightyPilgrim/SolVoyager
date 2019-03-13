@@ -10,6 +10,7 @@ namespace Resources
     {
         public void Platinium()
         {
+            Console.WriteLine("One of the better metals available, not as rare as palladium, though better for different projects.");
         }
 
         public void Palladium()

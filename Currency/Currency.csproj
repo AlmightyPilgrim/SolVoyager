@@ -44,11 +44,5 @@
     <Compile Include="Creds.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Resources\Resources.csproj">
-      <Project>{6a6d25c0-c839-45d8-ac5b-0b255fab6b9a}</Project>
-      <Name>Resources</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

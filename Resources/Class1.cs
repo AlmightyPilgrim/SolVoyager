@@ -10,7 +10,7 @@ namespace Resources
     {
         public void Platinium()
         {
-
+            cre
         }
 
         public void Palladium()

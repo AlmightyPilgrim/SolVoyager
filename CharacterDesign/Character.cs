@@ -118,6 +118,7 @@ namespace CharacterDesign
             bool check = false;
             do
             {
+                Console.Clear();
                 Console.Write(" Character Origins");
                 Console.WriteLine("------------------");
                 Console.WriteLine("1. The Hustler | 2. The Playboy | 3. ");
@@ -126,6 +127,8 @@ namespace CharacterDesign
 
                 if (select == "1")
                 {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Born an orphan into the dark slums previously known as the great City of New York." +
                         "\nYou have only known pain and suffering as you struggled to survive each and every day. " +
                         "Taken in by a family destroyed by the \"Veggious Plague," + "you lived a troubled childhood" +
@@ -134,16 +137,68 @@ namespace CharacterDesign
                         "Recently, you acquired a merchant ship to a mis-placed former client. " +
                         "Eager to escape and explore the stars you forever looked too in your youth. " +
                         "You now prepare for your journey to travel and trade amongst the stars.");
+                    Console.ResetColor();
+
+                    Console.WriteLine("\nB: Back | Enter: Select Character");
+                    var selectCharacter = Console.ReadLine();
+
+                    if (selectCharacter == "b")
+                    {
+                        check = false;
+                    }
+
+                    if (selectCharacter == "Enter")
+                    {
                     check = true;
+                    }
                 }
                 else if (select == "2")
                 {
-                    check = true;
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Born into a priveledged merchantile-family prominently known for " +
+                        "trading amongst the stars. You have lived a luxurious playboy lifestyle. However, your father" +
+                        " is terminally ill and you are the sole heir to the family business. Struck by the sudden loss" +
+                        " of your father and betrayal from the board, you are only left with enough money to acquire" +
+                        " an old space merchantile vessel.  It is now up to you to regain your family's honor and restore" +
+                        " the your name by rebuilding the empire taken from you.");
+                    Console.ResetColor();
+                    Console.WriteLine("\nB: Back | Enter: Select Character");
+                    var selectCharacter = Console.ReadLine();
+
+                    if (selectCharacter == "b")
+                    {
+                        check = false;
+                    }
+
+                    if (selectCharacter == "Enter")
+                    {
+                    
+
+                        check = true;
+                    }
+
                 }
 
                 else if (select == "3")
                 {
-                    check = true;
+                    Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("story");
+                        Console.ResetColor();
+                        Console.WriteLine("\nB: Back | Enter: Select Character");
+                        var selectCharacter = Console.ReadLine();
+
+                    if (selectCharacter == "b")
+                    {
+                        check = false;
+                    }
+
+                    if (selectCharacter == "Enter")
+                    {
+                        check = true;
+                    }
+
                 }
             }while (check == false);
 

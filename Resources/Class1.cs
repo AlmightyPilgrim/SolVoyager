@@ -34,19 +34,22 @@ namespace Resources
     public class Fabric
     {
         Creds fabricCreds = new Creds();
-        public void Silk()
+        public void Silk() // modifier of 4
         {
-
+            double fabricModifier = 4;
+            fabricCreds.FabricCreds(fabricModifier);
         }
         
-        public void Cotton()
+        public void Cotton() // modifier of 2
         {
-
+            double fabricModifier = 2;
+            fabricCreds.FabricCreds(fabricModifier);
         }
 
-        public void Linen()
+        public void Linen() // no modifier
         {
-
+            double fabricModifier = 1;
+            fabricCreds.FabricCreds(fabricModifier);
         }
     }
 

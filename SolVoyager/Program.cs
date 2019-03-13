@@ -16,13 +16,15 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
+            WarpSpeed testWarp = new WarpSpeed();
+            testWarp.WarpEquation(5);
             string x = "blah";
             int y = 1;
             Character testCharacter = new Character();
             testCharacter.BackgroundMale();
             Metals testMetals = new Metals();
             testMetals.Platinium();
-            y += 1;
+            y+=1;
             testCharacter.Gender(x);
             testCharacter.Eyes(x);
             testCharacter.Name(x);

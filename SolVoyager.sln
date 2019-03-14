@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomEvents", "RandomEvent
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time", "Time\Time.csproj", "{F7EFA046-80E7-473B-BB15-F5DF0B67AC7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy", "Galaxy\Galaxy.csproj", "{D10A60B0-1C6E-40E2-8A59-915E206D90C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{F7EFA046-80E7-473B-BB15-F5DF0B67AC7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7EFA046-80E7-473B-BB15-F5DF0B67AC7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7EFA046-80E7-473B-BB15-F5DF0B67AC7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D10A60B0-1C6E-40E2-8A59-915E206D90C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D10A60B0-1C6E-40E2-8A59-915E206D90C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D10A60B0-1C6E-40E2-8A59-915E206D90C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D10A60B0-1C6E-40E2-8A59-915E206D90C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,7 @@ namespace Time
 {
     public class TimeStart
     {
-        public void TravelTIme()
+        public void TravelTime()
         {
 
         }

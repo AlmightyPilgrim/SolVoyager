@@ -53,44 +53,53 @@ namespace Resources
         }
     }
 
-    public class Gemstones
+    public class Gemstones // base modifier of 6
     {
-        public void Diamond()
+        Creds gemstoneCreds = new Creds();
+        public void Diamond()  // base modifier of 4
         {
-
+            int gemstoneModifier = 6;
+            gemstoneCreds.GemstoneCreds(gemstoneModifier);
         }
 
-        public void Ruby()
+        public void Ruby() // base modifier of 3
         {
-
+            int supplyModifier = 3;
+            gemstoneCreds.FabricCreds(supplyModifier);
         }
 
-        public void Sapphire()
+        public void Sapphire() // base modifier of 4
         {
-
+            int supplyModifier = 4;
+            gemstoneCreds.FabricCreds(supplyModifier);
         }
     }
 
-    public class Supplies
+    public class Supplies // base modifier of 1
     {
-        public void Food()
+        Creds supplyCreds = new Creds();
+        public void Food() // no modifier
         {
-
+            double supplyModifier = 1;
+            supplyCreds.FabricCreds(supplyModifier);
         }
 
-        public void Water()
+        public void Water() // no modifier
         {
-
+            double supplyModifier = 1;
+            supplyCreds.FabricCreds(supplyModifier);
         }
 
-        public void Alcohol()
+        public void Alcohol() // modifier of 2
         {
-
+            double supplyModifier = 2;
+            supplyCreds.FabricCreds(supplyModifier);
         }
 
-        public void Medicine()
+        public void Medicine() // modifier of 5
         {
-
+            double supplyModifier = 5;
+            supplyCreds.FabricCreds(supplyModifier);
         }
     }
 }

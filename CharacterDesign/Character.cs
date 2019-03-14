@@ -286,5 +286,10 @@ namespace CharacterDesign
         public void StarterGemstone()
         {
         }
+
+        public void CharacterAge()
+        {
+
+        }
     }
 }

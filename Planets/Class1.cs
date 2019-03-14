@@ -10,93 +10,93 @@ namespace Planets
 {
     public class Earth // base modifiers: metal - 4, fabric - 3, gemstone - 5, supply- 2
     {                  // modifier increase: high +3, AA +2, Standard +-1, BA -2, low -3
-        public int EarthMetals() // high modifier
+        public int EarthMetals(int x) // high modifier
         {
-            return;
+            return x;
         }
 
-        public double EarthFabric() // low, if not fractional modifier
+        public double EarthFabric(double x) // low, if not fractional modifier
         {
-            return;
+            return x;
         }
 
-        public int EarthGemstone() // standard modifier
+        public int EarthGemstone(int x) // standard modifier
         {
-            return;
+            return x;
         }
 
-        public int EarthSupply() // below average modifier
+        public int EarthSupply(int x) // below average modifier
         {
-            return;
+            return x;
         }
     }
 
     public class Mars
     {
-        public int MarsMetals() // above average modifier
+        public int MarsMetals(int x) // above average modifier
         {
-            return;
+            return x;
         }
 
-        public double MarsFabric() // above average modifier
+        public double MarsFabric(double x) // above average modifier
         {
-            return;
+            return x;
         }
 
-        public int MarsGemstone() // high modifier
+        public int MarsGemstone(int x) // high modifier
         {
-            return;
+            return x;
         }
 
-        public int MarsSupply() // standard modifier
+        public int MarsSupply(int x) // standard modifier
         {
-            return;
+            return x;
         }
     }   
     
     public class MiningColony
     {
-        public int ColonyMetals() // might have a negative modifier, or fractional
+        public int ColonyMetals(int x) // might have a negative modifier, or fractional
         {
-            return;
+            return x;
         }
 
-        public double ColonyFabric() // higher than average modifier
+        public double ColonyFabric(double x) // higher than average modifier
         {
-            return;
+            return x;
         }
 
-        public int ColonyGemstone() // below average modifier
+        public int ColonyGemstone(int x) // below average modifier
         {
-            return;
+            return x;
         }
 
-        public int ColonySupply() // high modifier
+        public int ColonySupply(int x) // high modifier
         {
-            return;
+            return x;
         }
     }
 
     public class AlphaCentari
     {
-        public int CentariMetals() // standard modifier
+        public int CentariMetals(int x) // standard modifier
         {
-            return;
+            return x;
         }
 
-        public double CentariFabric() // standard modifier
+        public double CentariFabric(double x) // standard modifier
         {
-            return;
+            return x;
         }
 
-        public int CentariGemstone() // high modifier
+        public int CentariGemstone(int x) // high modifier
         {
-            return;
+            return x;
         }
 
-        public int CentariSupply() // above average- modifier
+        public int CentariSupply(int x) // above average- modifier
         {
-            return;
+            return x;
         }
     }
 }

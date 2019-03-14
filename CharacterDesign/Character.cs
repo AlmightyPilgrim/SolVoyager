@@ -210,8 +210,9 @@ namespace CharacterDesign
             do
             {
                 Console.Clear();
-                Console.Write(" Character Origins");
+                Console.WriteLine(" Character Origins");
                 Console.WriteLine("\n------------------");
+
                 Console.WriteLine("1.  | 2.  | 3. ");
 
                 var select = Console.ReadLine();

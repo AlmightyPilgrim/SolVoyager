@@ -8,5 +8,11 @@ namespace RandomEvents
 {
     public class Raid
     {
+     
+        
+
+
+
     }
+}
 }

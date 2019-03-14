@@ -8,7 +8,7 @@ using Currency;
 
 namespace PlanetsResources
 {
-    
+    // maybe try to make classes for each type of metal, per planet.
     public class Earth // base modifiers: metal - 4, fabric - 3, gemstone - 5, supply- 2
     {                  // modifier increase: high +3, AA +2, Standard +-1, BA -2, low -3
         Metals metalEarthCost = new Metals();

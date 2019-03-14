@@ -15,7 +15,7 @@ namespace Warp
             warp = 5;
             double z = 10 - warp;
             double velocity = (Math.Pow(warp, x)) + (Math.Pow(z, y));
-            Console.WriteLine($"Warp spped is {v}");
+            Console.WriteLine($"Warp spped is {velocity}");
             return velocity;
         }
     }

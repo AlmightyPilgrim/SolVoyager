@@ -8,8 +8,8 @@ using Currency;
 
 namespace Planets
 {
-    public class Earth
-    {
+    public class Earth // base modifiers: metal - 4, fabric - 3, gemstone - 5, supply- 2
+    {                  // modifier increase: high +3, AA +2, Standard +-1, BA -2, low -3
         public int EarthMetals() // high modifier
         {
             return;
@@ -73,7 +73,7 @@ namespace Planets
 
         public int ColonySupply() // high modifier
         {
-            return
+            return;
         }
     }
 

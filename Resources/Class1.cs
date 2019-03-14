@@ -10,96 +10,94 @@ namespace Resources
     public class Metals // get a base modifier of 2
     {
         Creds metalCredits = new Creds();
-        public void Platinium() // will have a modifier of 3
+        public int Platinium(int metalModifier) // will have a modifier of 3
         {
-            Console.WriteLine("One of the better metals available, not as rare as palladium, though better for different projects." +
-                "The base modifier for platinium 3");
-            int metalModifier = 3;
-            metalCredits.MetalCreds(metalModifier);
+            metalModifier *= 3;
+            return metalCredits.MetalCreds(metalModifier);
         }
 
-        public void Palladium() // will have a modifier of 4
+        public int Palladium(int metalModifier) // will have a modifier of 4
         {
-            int metalModifier = 4;
-            metalCredits.MetalCreds(metalModifier);
+            metalModifier *= 4;
+           return  metalCredits.MetalCreds(metalModifier);
         }
 
-        public void Titanium()
+        public int Titanium(int metalModifier) //modifier of 2
         {
-            int metalModifier = 2;
-            metalCredits.MetalCreds(metalModifier);
+            metalModifier *= 2;
+            return metalCredits.MetalCreds(metalModifier);
         }
     }
 
     public class Fabric
     {
         Creds fabricCreds = new Creds();
-        public void Silk() // modifier of 4
+        public double Silk(double fabricModifier) // modifier of 4
         {
-            double fabricModifier = 4;
-            fabricCreds.FabricCreds(fabricModifier);
+            fabricModifier *= 4;
+            return fabricCreds.FabricCreds(fabricModifier);
         }
         
-        public void Cotton() // modifier of 2
+        public double Cotton(double fabricModifier) // modifier of 2
         {
-            double fabricModifier = 2;
-            fabricCreds.FabricCreds(fabricModifier);
+            fabricModifier *= 2;
+            return fabricCreds.FabricCreds(fabricModifier);
         }
 
-        public void Linen() // no modifier
+        public double Linen(double fabricModifier) // no modifier
         {
-            double fabricModifier = 1;
-            fabricCreds.FabricCreds(fabricModifier);
+            fabricModifier *= 1;
+            return fabricCreds.FabricCreds(fabricModifier);
         }
     }
 
     public class Gemstones // base modifier of 6
     {
         Creds gemstoneCreds = new Creds();
-        public void Diamond()  // base modifier of 4
+        public int Diamond(int gemstoneModifier)  // base modifier of 4
         {
-            int gemstoneModifier = 6;
-            gemstoneCreds.GemstoneCreds(gemstoneModifier);
+            gemstoneModifier *= 6;
+            return gemstoneCreds.GemstoneCreds(gemstoneModifier);
         }
 
-        public void Ruby() // base modifier of 3
+        public int Ruby(int gemstoneModifier) // base modifier of 3
         {
-            int supplyModifier = 3;
-            gemstoneCreds.FabricCreds(supplyModifier);
+            gemstoneModifier *= 3;
+            return gemstoneCreds.GemstoneCreds(gemstoneModifier);
         }
 
-        public void Sapphire() // base modifier of 4
+        public int Sapphire(int gemstoneModifier) // base modifier of 4
         {
-            int supplyModifier = 4;
-            gemstoneCreds.FabricCreds(supplyModifier);
+            gemstoneModifier *= 4;
+            return gemstoneCreds.GemstoneCreds(gemstoneModifier);
         }
     }
 
     public class Supplies // base modifier of 1
     {
         Creds supplyCreds = new Creds();
-        public void Food() // no modifier
+        public double Food(double supplyModifier) // no modifier
         {
-            double supplyModifier = 1;
-            supplyCreds.FabricCreds(supplyModifier);
+            supplyModifier *= 1;
+            return supplyCreds.FabricCreds(supplyModifier);
         }
 
-        public void Water() // no modifier
+        public double Water(double supplyModifier) // no modifier
         {
-            double supplyModifier = 1;
-            supplyCreds.FabricCreds(supplyModifier);
+            supplyModifier *= 1;
+            return supplyCreds.FabricCreds(supplyModifier);
         }
 
-        public void Alcohol() // modifier of 2
+        public double Alcohol(double supplyModifier) // modifier of 2
         {
-            double supplyModifier = 2;
-            supplyCreds.FabricCreds(supplyModifier);
+            supplyModifier *= 2;
+            return supplyCreds.Supplies(supplyModifier);
         }
 
-        public void Medicine() // modifier of 5
+        public double Medicine(double supplyModifier) // modifier of 5
         {
-            double supplyModifier = 5;
-            supplyCreds.FabricCreds(supplyModifier);
+            supplyModifier *= 5;
+            return supplyCreds.Supplies(supplyModifier);
         }
     }
 }

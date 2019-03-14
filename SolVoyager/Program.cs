@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Currency;
 using Resources;
-using Planets;
+using PlanetsResources;
 using Warp;
 using Vessel;
 using CharacterDesign;
@@ -16,18 +16,11 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
-            WarpSpeed testWarp = new WarpSpeed();
-            testWarp.WarpEquation(5);
-            string x = "blah";
-            int y = 1;
-            Character testCharacter = new Character();
-            testCharacter.BackgroundMale();
-            Metals testMetals = new Metals();
-            testMetals.Platinium();
-            y+=1;
-            testCharacter.Gender(x);
-            testCharacter.Eyes(x);
-            testCharacter.Name(x);
+            AlphaCentari testEarth = new AlphaCentari();
+            testEarth.CentariMetals(12);
+            testEarth.CentariFabric(1);
+            testEarth.CentariGemstone(1);
+            testEarth.CentariSupply(1);
         }
     }
 }

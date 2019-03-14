@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterDesign", "Characte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{6A6D25C0-C839-45D8-AC5B-0B255FAB6B9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planets", "Planets\Planets.csproj", "{D8C288E5-6BB4-4F04-BFE0-8C2054732B3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetsResources", "Planets\PlanetsResources.csproj", "{D8C288E5-6BB4-4F04-BFE0-8C2054732B3B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warp", "Warp\Warp.csproj", "{78A46D46-8943-4065-B39F-F97C6995EF32}"
 EndProject

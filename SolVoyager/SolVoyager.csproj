@@ -58,9 +58,9 @@
       <Project>{ba3cd0f9-5ef4-4b54-9ff9-5131a3928013}</Project>
       <Name>Currency</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Planets\Planets.csproj">
+    <ProjectReference Include="..\Planets\PlanetsResources.csproj">
       <Project>{d8c288e5-6bb4-4f04-bfe0-8c2054732b3b}</Project>
-      <Name>Planets</Name>
+      <Name>PlanetsResources</Name>
     </ProjectReference>
     <ProjectReference Include="..\Resources\Resources.csproj">
       <Project>{6a6d25c0-c839-45d8-ac5b-0b255fab6b9a}</Project>

@@ -9,6 +9,7 @@ using PlanetsResources;
 using Warp;
 using Vessel;
 using CharacterDesign;
+using OpeningTitlePage;
 
 namespace SolVoyager
 {
@@ -16,6 +17,7 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
+            TitleScene testTitle = new TitleScene();
             AlphaCentari testEarth = new AlphaCentari();
             testEarth.CentariMetals(12);
             testEarth.CentariFabric(1);

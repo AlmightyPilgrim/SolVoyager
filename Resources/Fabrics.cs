@@ -3,28 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Currency;
 
 namespace Resources
 {
     class Silk
     {
-        public int silkBasePrice(int x)
+        Creds fabricCreds = new Creds();
+        public int silkBasePrice(int fabricModifier)
         {
-            return x;
+            return fabricModifier;
         }
     }
     class Cotton
     {
-        public int cottonBasePrice(int x)
+        Creds fabricCreds = new Creds();
+        public int cottonBasePrice(int fabricModifier)
         {
-            return x;
+            return fabricModifier;
         }
     }
     class Linen
     {
-        public int cottonBasePrice(int x)
+        Creds fabricCreds = new Creds();
+        public int cottonBasePrice(int fabricModifier)
         {
-            return x;
+            return fabricModifier;
         }
     }
 }

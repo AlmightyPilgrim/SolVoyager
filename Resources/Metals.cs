@@ -3,28 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Currency;
 
 namespace Resources
 {
     class Platinium
     {
-        public int platBasePrice(int x)
+        Creds metalCredits = new Creds();
+        public int platBasePrice(int metalModifier)
         {
-            return x;
+            return metalModifier;
         }
     }
     class Palladium
     {
-        public int palladBasePrice(int x)
+        Creds metalCredits = new Creds();
+        public int palladBasePrice(int metalModifier)
         {
-            return x;
+            return metalModifier;
         }
     }
     class Titanium
     {
-        public int titanBasePrice(int x)
+        Creds metalCredits = new Creds();
+        public int titanBasePrice(int metalModifier)
         {
-            return x;
+            return metalModifier;
         }
     }
 }

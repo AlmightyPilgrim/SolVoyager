@@ -3,28 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Currency;
 
 namespace Resources
 {
     class Diamond
     {
-        public int diaBasePrice(int x)
+        Creds gemstoneCreds = new Creds();
+        public int diaBasePrice(int gemModifier)
         {
-            return x;
+            return gemModifier;
         }
     }
     class Ruby
     {
-        public int rubyBasePrice(int x)
+        Creds gemstoneCreds = new Creds();
+        public int rubyBasePrice(int gemModifier)
         {
-            return x;
+            return gemModifier;
         }
     }
     class Sapphire
     {
-        public int sappBasePrice(int x)
+        Creds gemstoneCreds = new Creds();
+        public int sappBasePrice(int gemModifier)
         {
-            return x;
+            return gemModifier;
         }
     }
 }

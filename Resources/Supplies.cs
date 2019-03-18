@@ -3,35 +3,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Currency;
 
 namespace Resources
 {
     class Food
     {
-        public int foodBasePrice(int x)
+        Creds supplyCreds = new Creds();
+        public int foodBasePrice(int supplyModifier)
         {
-            return x;
+            return supplyModifier;
         }
     }
     class Water
     {
-        public int waterBasePrice(int x)
+        Creds supplyCreds = new Creds();
+        public int waterBasePrice(int supplyModifier)
         {
-            return x;
+            return supplyModifier;
         }
     }
     class Alcohol
     {
-        public int alcoBasePrice(int x)
+        Creds supplyCreds = new Creds();
+        public int alcoBasePrice(int supplyModifier)
         {
-            return x;
+            return supplyModifier;
         }
     }
     class Medicine
     {
-        public int mediBasePrice(int x)
+        Creds supplyCreds = new Creds();
+        public int mediBasePrice(int supplyModifier)
         {
-            return x;
+            return supplyModifier;
         }
     }
 }

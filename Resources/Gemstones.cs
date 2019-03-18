@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Resources
 {
-    class Gemstones
+    class Diamond
     {
+    }
+    class Ruby
+    {
+
+    }
+    class Sapphire
+    {
+
     }
 }

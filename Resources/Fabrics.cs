@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Resources
 {
-    class Fabrics
+    class Silk
     {
+    }
+    class Cotton
+    {
+
+    }
+    class Linen
+    {
+
     }
 }

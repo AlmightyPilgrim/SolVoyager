@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Resources
 {
-    class Supplies
+    class Food
     {
+    }
+    class Water
+    {
+
+    }
+    class Alcohol
+    {
+
+    }
+    class Medicine
+    {
+
     }
 }

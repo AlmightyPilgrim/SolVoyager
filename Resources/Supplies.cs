@@ -10,33 +10,37 @@ namespace Resources
     class Food
     {
         Creds supplyCreds = new Creds();
-        public int foodBasePrice(int supplyModifier)
+        public double foodBasePrice(int supplyModifier) // no mod
         {
-            return supplyModifier;
+            supplyModifier *= 1;
+            return supplyCreds.FabricCreds(supplyModifier);
         }
     }
     class Water
     {
-        Creds supplyCreds = new Creds();
-        public int waterBasePrice(int supplyModifier)
+        Creds supplyCreds = new Creds(); // no mod
+        public double waterBasePrice(int supplyModifier)
         {
-            return supplyModifier;
+            supplyModifier *= 1;
+            return supplyCreds.FabricCreds(supplyModifier);
         }
     }
     class Alcohol
     {
-        Creds supplyCreds = new Creds();
-        public int alcoBasePrice(int supplyModifier)
+        Creds supplyCreds = new Creds(); // mod of 2
+        public double alcoBasePrice(int supplyModifier)
         {
-            return supplyModifier;
+            supplyModifier *= 2;
+            return supplyCreds.FabricCreds(supplyModifier);
         }
     }
     class Medicine
     {
         Creds supplyCreds = new Creds();
-        public int mediBasePrice(int supplyModifier)
+        public double mediBasePrice(int supplyModifier) // mod of 5
         {
-            return supplyModifier;
+            supplyModifier *= 5;
+            return supplyCreds.FabricCreds(supplyModifier);
         }
     }
 }

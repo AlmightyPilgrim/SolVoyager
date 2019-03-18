@@ -10,25 +10,28 @@ namespace Resources
     class Diamond
     {
         Creds gemstoneCreds = new Creds();
-        public int diaBasePrice(int gemModifier)
+        public int diaBasePrice(int gemModifier) // base mod of 6
         {
-            return gemModifier;
+            gemModifier *= 6;
+            return gemstoneCreds.GemstoneCreds(gemModifier);
         }
     }
     class Ruby
     {
         Creds gemstoneCreds = new Creds();
-        public int rubyBasePrice(int gemModifier)
+        public int rubyBasePrice(int gemModifier) // base mod of 3
         {
-            return gemModifier;
+            gemModifier *= 3;
+            return gemstoneCreds.GemstoneCreds(gemModifier);
         }
     }
     class Sapphire
     {
         Creds gemstoneCreds = new Creds();
-        public int sappBasePrice(int gemModifier)
+        public int sappBasePrice(int gemModifier) // base mod of 4
         {
-            return gemModifier;
+            gemModifier *= 4;
+            return gemstoneCreds.GemstoneCreds(gemModifier);
         }
     }
 }

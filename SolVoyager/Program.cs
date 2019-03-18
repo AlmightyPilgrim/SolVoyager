@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Currency;
 using Resources;
-using Planets;
+using PlanetsResources;
 using Warp;
 using Vessel;
 using CharacterDesign;

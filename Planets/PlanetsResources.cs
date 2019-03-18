@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Resources;
 using Currency;
 
-namespace Planets
+namespace PlanetsResources
 {
     // maybe try to make classes for each type of metal, per planet.
     // need a list for planets

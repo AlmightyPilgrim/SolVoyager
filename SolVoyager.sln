@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterDesign", "Characte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{6A6D25C0-C839-45D8-AC5B-0B255FAB6B9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetsResources", "Planets\PlanetsResources.csproj", "{D8C288E5-6BB4-4F04-BFE0-8C2054732B3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planets", "Planets\Planets.csproj", "{D8C288E5-6BB4-4F04-BFE0-8C2054732B3B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warp", "Warp\Warp.csproj", "{78A46D46-8943-4065-B39F-F97C6995EF32}"
 EndProject
@@ -22,8 +22,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomEvents", "RandomEvents\RandomEvents.csproj", "{E4212367-EE29-4F7C-B388-4AC6EF023F50}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time", "Time\Time.csproj", "{F7EFA046-80E7-473B-BB15-F5DF0B67AC7C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy", "Galaxy\Galaxy.csproj", "{D10A60B0-1C6E-40E2-8A59-915E206D90C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +69,6 @@ Global
 		{F7EFA046-80E7-473B-BB15-F5DF0B67AC7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7EFA046-80E7-473B-BB15-F5DF0B67AC7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7EFA046-80E7-473B-BB15-F5DF0B67AC7C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D10A60B0-1C6E-40E2-8A59-915E206D90C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D10A60B0-1C6E-40E2-8A59-915E206D90C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D10A60B0-1C6E-40E2-8A59-915E206D90C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D10A60B0-1C6E-40E2-8A59-915E206D90C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

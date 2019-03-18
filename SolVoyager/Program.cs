@@ -9,6 +9,7 @@ using Planets;
 using Warp;
 using Vessel;
 using CharacterDesign;
+using RandomEvents;
 
 namespace SolVoyager
 {
@@ -16,6 +17,8 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
+            Events testEvents = new Events();
+            testEvents.RandomNumber();
             WarpSpeed testWarp = new WarpSpeed();
             testWarp.WarpEquation(5);
             string x = "blah";

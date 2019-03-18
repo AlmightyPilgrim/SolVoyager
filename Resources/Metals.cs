@@ -8,13 +8,23 @@ namespace Resources
 {
     class Platinium
     {
+        public int platBasePrice(int x)
+        {
+            return x;
+        }
     }
     class Palladium
     {
-
+        public int palladBasePrice(int x)
+        {
+            return x;
+        }
     }
     class Titanium
     {
-        
+        public int titanBasePrice(int x)
+        {
+            return x;
+        }
     }
 }

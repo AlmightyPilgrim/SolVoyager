@@ -8,13 +8,23 @@ namespace Resources
 {
     class Diamond
     {
+        public int diaBasePrice(int x)
+        {
+            return x;
+        }
     }
     class Ruby
     {
-
+        public int rubyBasePrice(int x)
+        {
+            return x;
+        }
     }
     class Sapphire
     {
-
+        public int sappBasePrice(int x)
+        {
+            return x;
+        }
     }
 }

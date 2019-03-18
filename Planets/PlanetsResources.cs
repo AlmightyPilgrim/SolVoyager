@@ -14,7 +14,7 @@ namespace PlanetsResources
     // might need a resource list
     public class Earth // base modifiers: metal - 4, fabric - 3, gemstone - 5, supply- 2
     {                  // modifier increase: high +3, AA +2, Standard +-1, BA -2, low -3
-        Metals metalEarthCost = new Metals();
+        Metal metalEarthCost = new Metal();
         Fabric fabricEarthCost = new Fabric();
         Gemstones gemstoneEarthCost = new Gemstones();
         Supplies supplyEarthCost = new Supplies();
@@ -80,7 +80,7 @@ namespace PlanetsResources
 
     public class Mars // base modifiers: metal - 3, fabric - 3, gemstone - 6, supply - 4
     {
-        Metals metalMarsCost = new Metals();
+        Metal metalMarsCost = new Metal();
         Fabric fabricMarsCost = new Fabric();
         Gemstones gemstoneMarsCost = new Gemstones();
         Supplies supplyMarsCost = new Supplies();
@@ -146,7 +146,7 @@ namespace PlanetsResources
     
     public class MiningColony // base modifiers - 2, fabric - 4, gemstone - 4, supply - 5
     {
-        Metals metalColonyCost = new Metals();
+        Metal metalColonyCost = new Metal();
         Fabric fabricColonyCost = new Fabric();
         Gemstones gemstoneColonyCost = new Gemstones();
         Supplies supplyColonyCost = new Supplies();
@@ -212,7 +212,7 @@ namespace PlanetsResources
 
     public class AlphaCentari // base modifiers: metal - 3, fabic - 4, gemstone - 5, supply - 3
     {
-        Metals metalCentariCost = new Metals();
+        Metal metalCentariCost = new Metal();
         Fabric fabricCentariCost = new Fabric();
         Gemstones gemstoneCentariCost = new Gemstones();
         Supplies supplyCentariCost = new Supplies();

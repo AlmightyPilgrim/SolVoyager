@@ -158,7 +158,6 @@ namespace Planets // Resources
                 $"{earthWater} - Water value on Earth\n" +
                 $"{earthAlcohol} - Alcohol value on Earth\n" +
                 $"{earthMedicine} - Medicine value on Earth");
-            return supply;
         }
     }
 
@@ -231,7 +230,6 @@ namespace Planets // Resources
             Console.WriteLine($"{marsSilk} - Silk value on Mars\n" +
                 $"{marsCotton} - Cotton value on Mars\n" +
                 $"{marsLinen} - Linen value on Mars");
-            return fabric;
         }
 
         public int MarsDiamond()

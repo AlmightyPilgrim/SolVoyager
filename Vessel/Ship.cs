@@ -12,5 +12,10 @@ namespace Vessel
         {
 
         }
+        public int Capacity(int hold)
+        {
+            return hold;
+        }
+
     }
 }

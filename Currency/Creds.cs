@@ -8,7 +8,7 @@ namespace Currency
 {
     public class Creds
     {
-        int crate = 100; 
+        int crate = 5; 
         public int MetalCreds(int chosenMetal) //metal gets a base modifier of 2
         {
             // crateNumber *= crate; --- This is or when number of crates are more than 1 (MIGHT NOT BE NECESSARY)

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AlphaCentari.cs" />
     <Compile Include="Earth.cs" />
+    <Compile Include="Market.cs" />
     <Compile Include="Mars.cs" />
     <Compile Include="MiningColony.cs" />
     <Compile Include="PlanetsResources.cs" />

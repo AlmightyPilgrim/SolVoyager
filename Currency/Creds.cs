@@ -34,9 +34,14 @@ namespace Currency
 
         public double Supplies(double chosenSupply) // supplies gets a base modifier of 1
         {
-            int supplies = crate * 1;
+            int supplies = box * 1;
             chosenSupply *= supplies;
             return chosenSupply;
+        }
+
+        public int Crates(int x) //method for number of crates to track amount then multiple amount before buying/ selling
+        {
+            return x;
         }
     }
 }

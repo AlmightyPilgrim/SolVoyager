@@ -4,86 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Resources;
+using Currency;
 
 namespace Vessel
 {
     public class Ship
     {
+        Creds crateTrack = new Creds();
+
         public void Crew()
         {
 
         }
-        public int Capacity(int hold)
+        public int Capacity(int x)
         {
-
+            int hold = 0;
+            hold += x;
+            if (hold > 20)
+            {
+                Console.WriteLine("Overburdened, dicking crates till at max capacity of 20");
+                while (hold > 20)
+                {
+                    hold--;
+                }
+            }
+            crateTrack.Crates(hold);
             return hold;
-        }
-        public int PlatCrates(int x)
-        {
-
-            return x;
-        }
-
-        public int PalladCrates(int x)
-        {
-
-            return x;
-        }
-
-        public int TitanCrates(int x)
-        {
-
-            return x;
-        }
-
-        public double SilkCrates(int x)
-        {
-            return x;
-        }
-
-        public double CottonCrates(int x)
-        {
-            return x;
-        }
-
-        public double LinenCrates(int x)
-        {
-            return x;
-        }
-
-        public int DiamondCrates(int x)
-        {
-            return x;
-        }
-
-        public int RubyCrates(int x)
-        {
-            return x;
-        }
-
-        public int SapphireCrates(int x)
-        {
-            return x;
-        }
-
-        public double FoodCrates(int x)
-        {
-            return x;
-        }
-
-        public double WaterCrates(int x)
-        {
-            return x;
-        }
-
-        public double AlcoholCrates(int x)
-        {
-            return x;
-        }
-
-        public double MedicineCrates(int x)
-        {
-            return x;
         }
 
         public double WarpEquation(int warp)

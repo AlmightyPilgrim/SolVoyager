@@ -12,13 +12,16 @@ namespace Planets
     {
         public void MarketDisplay()
         {
-            Console.WriteLine("Which Resource Prices would you like to view? \n1 - Metals\t 2 - Fabrics\n3 - Gemstone\t 4 - Supplies");
+            Metal metalPrice = new Metal();
+            Fabric fabricPrice = new Fabric();
+            Gemstones gemstonePrice = new Gemstones();
+            Supplies supplyPrice = new Supplies();
+
+            Console.WriteLine("Which resource would you like to view? \n1 - Metals\t 2 - Fabrics\n3 - Gemstone\t 4 - Supplies");
             string choice = Console.ReadLine();
             switch (choice)
             {
-                case "1": //Metal selection buy/sell
-                    Console.WriteLine("Metal Prices:");
-                    
+                case "1": //Metal selection buy/sell                    
                     Console.WriteLine("Do you wish to buy or sell?");
                     string answer = Console.ReadLine();
                     if (answer == "buy")
@@ -30,46 +33,40 @@ namespace Planets
                         MetalMarketSell();
                     }
                     break;
-                case "2"://Fabric
-                    Console.WriteLine("Fabric Prices:");
-                    
+                case "2"://Fabric                    
                     Console.WriteLine("Do you wish to buy or sell?");
                     answer = Console.ReadLine();
                     if (answer == "buy")
                     {
-                        MetalMarketBuy();
+                        GemstoneBuy();
                     }
                     else
                     {
-                        MetalMarketSell();
+                        GemstoneSell();
                     }
                     break;
-                case "3"://gemstone
-                    Console.WriteLine("Gemstone Prices:");
-                    
+                case "3"://gemstone                    
                     Console.WriteLine("Do you wish to buy or sell?");
                     answer = Console.ReadLine();
                     if (answer == "buy")
                     {
-                        MetalMarketBuy();
+                        GemstoneBuy();
                     }
                     else
                     {
-                        MetalMarketSell();
+                        GemstoneSell();
                     }
                     break;
-                case "4"://supplies
-                    Console.WriteLine("Basic Supply Prices:");
-                   
+                case "4"://supplies                 
                     Console.WriteLine("Do you wish to buy or sell?");
                     answer = Console.ReadLine();
                     if (answer == "buy")
                     {
-                        MetalMarketBuy();
+                        SupplyBuy();
                     }
                     else
                     {
-                        MetalMarketSell();
+                        SupplySell();
                     }
                     break;
             }

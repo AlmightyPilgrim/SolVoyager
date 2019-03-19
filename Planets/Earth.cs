@@ -9,6 +9,6 @@ namespace Planets
 {
     class Earth
     {
-
+        
     }
 }

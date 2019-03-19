@@ -6,76 +6,168 @@ using System.Threading.Tasks;
 using Resources;
 using Currency;
 
-namespace Planets // area for resources
+namespace Planets // Resources
 {
     // maybe try to make classes for each type of metal, per planet.
     // need a list for planets
     // list will be help with organizing resources
     // might need a resource list
+
     public class EarthResources // base modifiers: metal - 4, fabric - 3, gemstone - 5, supply- 2
     {                  // modifier increase: high +3, AA +2, Standard +-1, BA -2, low -3
         Metal metalEarthCost = new Metal();
         Fabric fabricEarthCost = new Fabric();
         Gemstones gemstoneEarthCost = new Gemstones();
         Supplies supplyEarthCost = new Supplies();
+        
         //basevalue is the base modifier
-
-        public int EarthMetals(int metal) // high modifier
+        public int EarthPlatinium ()
         {
             int basevalue = 4 + 3;
-
             int earthPlatinium = metalEarthCost.Platinium(basevalue);
-            int earthPalladium = metalEarthCost.Palladium(basevalue);
-            int earthTitanium = metalEarthCost.Titanium(basevalue);
-
-            Console.WriteLine($"{earthPlatinium} - Platinium value on Earth\n" +
-                $"{earthPalladium} - Palladium value on Earth\n" +
-                $"{earthTitanium} - Titanium value on Earth");
-            return metal;
+            return earthPlatinium;
         }
 
-        public double EarthFabric(double fabric) // low, if not fractional modifier
+        public int EarthPalladium ()
+        {
+            int basevalue = 4 + 3;
+            int earthPalladium = metalEarthCost.Palladium(basevalue);
+            return earthPalladium;
+        }    //separating the subtypes of resources to be able to pull individually
+
+        public int EarthTitanium ()
+        {
+            int basevalue = 4 + 3;
+            int earthTitanium = metalEarthCost.Titanium(basevalue);
+            return earthTitanium;
+        }
+
+       // public int EarthMetals(int metal) // high modifier
+       // {
+       //     int basevalue = 4 + 3;
+
+       //     int earthPlatinium = metalEarthCost.Platinium(basevalue);
+       //     int earthPalladium = metalEarthCost.Palladium(basevalue);
+       //     int earthTitanium = metalEarthCost.Titanium(basevalue);
+
+       //     Console.WriteLine($"{earthPlatinium} - Platinium value on Earth\n" +
+       //         $"{earthPalladium} - Palladium value on Earth\n" +
+       //         $"{earthTitanium} - Titanium value on Earth");
+       //     return metal;
+       // }
+
+        public double EarthSilk ()
         {
             double basevalue = (1 / 3.0);
-
             double earthSilk = fabricEarthCost.Silk(basevalue);
-            double earthCotton = fabricEarthCost.Cotton(basevalue);
-            double earthLinen = fabricEarthCost.Linen(basevalue);
-
-            Console.WriteLine($"{earthSilk} - Silk value on Earth\n" +
-                $"{earthCotton} - Cotton value on Earth\n" +
-                $"{earthLinen} - Linen value on Earth");
-            return fabric;
+            return earthSilk;
         }
 
-        public int EarthGemstone(int gemstone) // standard modifier
+        public double EarthCotton ()
+        {
+            double basevalue = (1 / 3.0);
+            double earthCotton = fabricEarthCost.Cotton(basevalue);
+            return earthCotton;
+        }
+
+        public double EarthLinen()
+        {
+            double basevalue = (1 / 3.0);
+            double earthLinen = fabricEarthCost.Linen(basevalue);
+            return earthLinen;
+        }
+
+        //public double EarthFabric(double fabric) // low, if not fractional modifier
+        //{
+        //    double basevalue = (1 / 3.0);
+
+        //    double earthSilk = fabricEarthCost.Silk(basevalue);
+        //    double earthCotton = fabricEarthCost.Cotton(basevalue);
+        //    double earthLinen = fabricEarthCost.Linen(basevalue);
+
+        //    Console.WriteLine($"{earthSilk} - Silk value on Earth\n" +
+        //        $"{earthCotton} - Cotton value on Earth\n" +
+        //        $"{earthLinen} - Linen value on Earth");
+        //    return fabric;
+        //}
+
+        public int EarthDiamond()
         {
             int basevalue = 5 + 1;
-
             int earthDiamond = gemstoneEarthCost.Diamond(basevalue);
-            int earthRuby = gemstoneEarthCost.Ruby(basevalue);
-            int earthSapphire = gemstoneEarthCost.Sapphire(basevalue);
-
-            Console.WriteLine($"{earthDiamond} - Diamond value on Earth\n" +
-                $"{earthRuby} - Ruby value on Earth\n" +
-                $"{earthSapphire} - Sapphire value on Earth");
-            return gemstone;
+            return earthDiamond;
         }
 
-        public int EarthSupply(int supply) // below average modifier
+        public int EarthRuby()
+        {
+            int basevalue = 5 + 1;
+            int earthRuby = gemstoneEarthCost.Ruby(basevalue);
+            return earthRuby;
+        }
+
+        public int EarthSapphire()
+        {
+            int basevalue = 5 + 1;
+            int earthSapphire = gemstoneEarthCost.Sapphire(basevalue);
+            return earthSapphire;
+        }
+
+        //public int EarthGemstone(int gemstone) // standard modifier
+        //{
+        //    int basevalue = 5 + 1;
+
+        //    int earthDiamond = gemstoneEarthCost.Diamond(basevalue);
+        //    int earthRuby = gemstoneEarthCost.Ruby(basevalue);
+        //    int earthSapphire = gemstoneEarthCost.Sapphire(basevalue);
+
+        //    Console.WriteLine($"{earthDiamond} - Diamond value on Earth\n" +
+        //        $"{earthRuby} - Ruby value on Earth\n" +
+        //        $"{earthSapphire} - Sapphire value on Earth");
+        //    return gemstone;
+        //}
+
+        public double EarthFood()
         {
             int basevalue = 2 - 1;
             double earthFood = supplyEarthCost.Food(basevalue);
-            double earthWater = supplyEarthCost.Water(basevalue);
-            double earthAlcohol = supplyEarthCost.Alcohol(basevalue);
-            double earthMedicine = supplyEarthCost.Medicine(basevalue);
-
-            Console.WriteLine($"{earthFood} - Food value on Earth\n" +
-                $"{earthWater} - Water value on Earth\n" +
-                $"{earthAlcohol} - Alcohol value on Earth\n" +
-                $"{earthMedicine} - Medicine value on Earth");
-            return supply;
+            return earthFood;
         }
+
+        public double EarthWater()
+        {
+            int basevalue = 2 - 1;
+            double earthWater = supplyEarthCost.Water(basevalue);
+            return earthWater;
+        }
+
+        public double EarthAlcohol()
+        {
+            int basevalue = 2 - 1;
+            double earthAlcohol = supplyEarthCost.Alcohol(basevalue);
+            return earthAlcohol;
+        }
+
+        public double EarthMedicine()
+        {
+            int basevalue = 2 - 1;
+            double earthMedicine = supplyEarthCost.Medicine(basevalue);
+            return earthMedicine;
+        }
+
+        //public int EarthSupply(int supply) // below average modifier
+        //{
+        //    int basevalue = 2 - 1;
+        //    double earthFood = supplyEarthCost.Food(basevalue);
+        //    double earthWater = supplyEarthCost.Water(basevalue);
+        //    double earthAlcohol = supplyEarthCost.Alcohol(basevalue);
+        //    double earthMedicine = supplyEarthCost.Medicine(basevalue);
+
+        //    Console.WriteLine($"{earthFood} - Food value on Earth\n" +
+        //        $"{earthWater} - Water value on Earth\n" +
+        //        $"{earthAlcohol} - Alcohol value on Earth\n" +
+        //        $"{earthMedicine} - Medicine value on Earth");
+        //    return supply;
+        //}
     }
 
     public class MarsResources // base modifiers: metal - 3, fabric - 3, gemstone - 6, supply - 4
@@ -210,7 +302,7 @@ namespace Planets // area for resources
         }
     }
 
-    public class AlphaCentariResources // base modifiers: metal - 3, fabric - 4, gemstone - 5, supply - 3
+    public class AlphaCentariResources // base modifiers: metal - 3, fabic - 4, gemstone - 5, supply - 3
     {
         Metal metalCentariCost = new Metal();
         Fabric fabricCentariCost = new Fabric();

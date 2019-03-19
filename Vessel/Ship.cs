@@ -16,6 +16,11 @@ namespace Vessel
         {
             return hold;
         }
+        public int Crates(int x)
+        {
+            return x;
+        }
+
 
     }
 }

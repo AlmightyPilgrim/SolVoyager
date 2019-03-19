@@ -8,5 +8,9 @@ namespace Vessel
 {
     public class Ship
     {
+        public void Crew()
+        {
+
+        }
     }
 }

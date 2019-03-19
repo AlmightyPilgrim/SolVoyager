@@ -43,4 +43,4 @@ namespace RandomEvents
             Console.ReadLine();
     }
 }
-}
+

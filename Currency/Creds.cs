@@ -14,7 +14,6 @@ namespace Currency
             // crateNumber *= crate; --- This is or when number of crates are more than 1 (MIGHT NOT BE NECESSARY)
             int metal = crate * 2;
             chosenMetal *= metal;
-            Console.WriteLine($"{chosenMetal} credits for amount.");
             return chosenMetal;
         }
 
@@ -22,7 +21,6 @@ namespace Currency
         {
             double fabric = crate * 1.5;
             chosenFabric *= fabric;
-            Console.WriteLine($"{chosenFabric} credits for amount.");
             return chosenFabric;
         }
 
@@ -30,7 +28,6 @@ namespace Currency
         {
             int gemstone = crate * 6;
             chosenGemstone *= gemstone;
-            Console.WriteLine($"{chosenGemstone} credits for amount.");
             return chosenGemstone;
         }
 
@@ -38,7 +35,6 @@ namespace Currency
         {
             int supplies = crate * 1;
             chosenSupply *= supplies;
-            Console.WriteLine($"{chosenSupply} credits for amount.");
             return chosenSupply;
         }
     }

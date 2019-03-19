@@ -15,6 +15,7 @@ namespace Resources
             metalModifier *= 3;
             return metalCredits.MetalCreds(metalModifier);
         }
+
     }
     class Palladium
     {

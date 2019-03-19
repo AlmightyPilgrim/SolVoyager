@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Planets.cs" />
+    <Compile Include="AlphaCentari.cs" />
+    <Compile Include="Earth.cs" />
+    <Compile Include="Mars.cs" />
+    <Compile Include="MiningColony.cs" />
     <Compile Include="PlanetsResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

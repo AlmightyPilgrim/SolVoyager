@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using Resources;
 using Currency;
 
-namespace PlanetsResources
+namespace Planets // area for resources
 {
     // maybe try to make classes for each type of metal, per planet.
     // need a list for planets
     // list will be help with organizing resources
     // might need a resource list
-    public class Earth // base modifiers: metal - 4, fabric - 3, gemstone - 5, supply- 2
+    public class EarthResources // base modifiers: metal - 4, fabric - 3, gemstone - 5, supply- 2
     {                  // modifier increase: high +3, AA +2, Standard +-1, BA -2, low -3
         Metal metalEarthCost = new Metal();
         Fabric fabricEarthCost = new Fabric();
@@ -78,7 +78,7 @@ namespace PlanetsResources
         }
     }
 
-    public class Mars // base modifiers: metal - 3, fabric - 3, gemstone - 6, supply - 4
+    public class MarsResources // base modifiers: metal - 3, fabric - 3, gemstone - 6, supply - 4
     {
         Metal metalMarsCost = new Metal();
         Fabric fabricMarsCost = new Fabric();
@@ -144,7 +144,7 @@ namespace PlanetsResources
         }
     }   
     
-    public class MiningColony // base modifiers - 2, fabric - 4, gemstone - 4, supply - 5
+    public class MiningColonyResources // base modifiers - 2, fabric - 4, gemstone - 4, supply - 5
     {
         Metal metalColonyCost = new Metal();
         Fabric fabricColonyCost = new Fabric();
@@ -210,7 +210,7 @@ namespace PlanetsResources
         }
     }
 
-    public class AlphaCentari // base modifiers: metal - 3, fabic - 4, gemstone - 5, supply - 3
+    public class AlphaCentariResources // base modifiers: metal - 3, fabric - 4, gemstone - 5, supply - 3
     {
         Metal metalCentariCost = new Metal();
         Fabric fabricCentariCost = new Fabric();

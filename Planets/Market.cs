@@ -16,6 +16,7 @@ namespace Planets
             Fabric fabricPrice = new Fabric();
             Gemstones gemstonePrice = new Gemstones();
             Supplies supplyPrice = new Supplies();
+            Ship vesselHold = new Ship();
 
             Console.WriteLine("Which resource would you like to view? \n1 - Metals\t 2 - Fabrics\n3 - Gemstone\t 4 - Supplies");
             string choice = Console.ReadLine();

@@ -7,7 +7,8 @@ using Currency;
 
 namespace Resources
 {
-    public class Metals // get a base modifier of 2
+    // make classes for each of the different types of sub-resources
+    public class Metal // get a base modifier of 2
     {
         Creds metalCredits = new Creds();
         public int Platinium(int metalModifier) // will have a modifier of 3

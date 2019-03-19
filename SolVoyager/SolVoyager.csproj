@@ -58,6 +58,10 @@
       <Project>{ba3cd0f9-5ef4-4b54-9ff9-5131a3928013}</Project>
       <Name>Currency</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OpeningTitlePage\OpeningTitlePage.csproj">
+      <Project>{ae38eb8a-a7df-4274-87fc-d596ccde6b67}</Project>
+      <Name>OpeningTitlePage</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Planets\Planets.csproj">
       <Project>{d8c288e5-6bb4-4f04-bfe0-8c2054732b3b}</Project>
       <Name>Planets</Name>

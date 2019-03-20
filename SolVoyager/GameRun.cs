@@ -4,15 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Warp
+namespace SolVoyager
 {
-    public class WarpSpeed
+    class GameRun
     {
-        
-    }
-
-    public class Travel
-    {
-
     }
 }

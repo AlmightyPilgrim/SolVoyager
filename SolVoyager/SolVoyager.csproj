@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameRun.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,10 +78,6 @@
     <ProjectReference Include="..\Vessel\Vessel.csproj">
       <Project>{a7abf8ae-06aa-4971-8d19-a528f28ae3d5}</Project>
       <Name>Vessel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Warp\Warp.csproj">
-      <Project>{78a46d46-8943-4065-b39f-f97c6995ef32}</Project>
-      <Name>Warp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -17,17 +17,16 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
-            Market testMarket = new Market();
-
-            testMarket.MarketDisplay("Earth");
-        
-            EarthResources testEarth = new EarthResources();
+            
+             Events events = new Events();
+            
+            //EarthResources testEarth = new EarthResources();
             //TitleScene testTitle = new TitleScene();
             //AlphaCentari testEarth = new AlphaCentari();
-            testEarth.EarthMetals();
-            testEarth.EarthFabric();
-            testEarth.EarthGemstone();
-            testEarth.EarthSupply();
+            //testEarth.EarthMetals();
+            //testEarth.EarthFabric();
+            //testEarth.EarthGemstone();
+            //testEarth.EarthSupply();
         }
     }
 }

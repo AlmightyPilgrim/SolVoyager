@@ -64,7 +64,7 @@ namespace CharacterDesign
                         check = true;
                         break;
                     default:
-                        Console.WriteLine("Sorry if your favorite eye color is not available");
+                        Console.WriteLine("Sorry if your favorite hair color is not available");
                         check = false;
                         break;
                 }
@@ -121,7 +121,7 @@ namespace CharacterDesign
                 Console.Clear();
                 Console.Write(" Character Origins");
                 Console.WriteLine("------------------");
-                Console.WriteLine("1. The Hustler | 2. The Playboy | 3. ");
+                Console.WriteLine("1. The Hustler | 2. The Playboy | 3. Average Guy");
 
                 var select = Console.ReadLine();
 
@@ -184,7 +184,10 @@ namespace CharacterDesign
                 {
                     Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("story");
+                        Console.WriteLine("You have lived a normal life but have always had a longing to travel amongst the stars.  " +
+                            "Your life is mediocre and you are an alright fellow.  Working hard all your life has presented you with many career opportunities." +
+                            " You have worked diligently to get where you are in your career and have saved up enough money to buy a merchantile space ship." +
+                            " With trouble at home with the wife, you now can leave to fulfill your long dream to travel in space...");
                         Console.ResetColor();
                         Console.WriteLine("\nB: Back | Enter: Select Character");
                         var selectCharacter = Console.ReadLine();

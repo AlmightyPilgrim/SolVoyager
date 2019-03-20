@@ -83,19 +83,19 @@ namespace Vessel
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine($"{platCrate()} crates of platinium");
+                    Console.WriteLine($" crates of platinium");
                     break;
                 case "2":
-                    Console.WriteLine($"{palladCrate()} crates of palladium");
+                    Console.WriteLine($" crates of palladium");
                     break;
                 case "3":
-                    Console.WriteLine($"{titanCrate()} crates of titanium");
+                    Console.WriteLine($" crates of titanium");
                     break;
                 default:
                     Console.WriteLine("Invaild Input");
                     break;
             }
-            input = platCrate() + palladCrate() + titanCrate();
+            input = 0;
             return input;
         }
 
@@ -121,19 +121,19 @@ namespace Vessel
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine($"{platCrate()} crates of platinium");
+                    Console.WriteLine($" crates of platinium");
                     break;
                 case "2":
-                    Console.WriteLine($"{palladCrate()} crates of palladium");
+                    Console.WriteLine($" crates of palladium");
                     break;
                 case "3":
-                    Console.WriteLine($"{titanCrate()} crates of titanium");
+                    Console.WriteLine($" crates of titanium");
                     break;
                 default:
                     Console.WriteLine("Invaild Input");
                     break;
             }
-            input = platCrate() + palladCrate() + titanCrate();
+            input = 0;
             return input;
         }
 
@@ -157,19 +157,19 @@ namespace Vessel
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine($"{platCrate()} crates of platinium");
+                    Console.WriteLine($" crates of platinium");
                     break;
                 case "2":
-                    Console.WriteLine($"{palladCrate()} crates of palladium");
+                    Console.WriteLine($" crates of palladium");
                     break;
                 case "3":
-                    Console.WriteLine($"{titanCrate()} crates of titanium");
+                    Console.WriteLine($" crates of titanium");
                     break;
                 default:
                     Console.WriteLine("Invaild Input");
                     break;
             }
-            input = platCrate() + palladCrate() + titanCrate();
+            input = 0;
             return input;
         }
 

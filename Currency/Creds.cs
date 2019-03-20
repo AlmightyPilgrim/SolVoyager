@@ -41,6 +41,7 @@ namespace Currency
 
         public int Crates(int x) //method for number of crates to track amount then multiple amount before buying/ selling
         {
+            int box = x;
             return x;
         }
     }

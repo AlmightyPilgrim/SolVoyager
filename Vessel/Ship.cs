@@ -16,13 +16,13 @@ namespace Vessel
         {
 
         }
-        public int Capacity(int x)
+        public int Capacity(int input)  // tracking number of crates, and limiting amount allowed
         {
             int hold = 0;
-            hold += x;
+            hold += input;
             if (hold > 20)
             {
-                Console.WriteLine("Overburdened, dicking crates till at max capacity of 20");
+                Console.WriteLine("Overburdened, ditching crates till at max capacity of 20");
                 while (hold > 20)
                 {
                     hold--;

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Currency;
 using Resources;
 using Planets;
-using Warp;
 using Vessel;
 using CharacterDesign;
 using RandomEvents;
@@ -18,13 +17,16 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
-            EarthResources testEarth = new EarthResources();
+            
+             Events events = new Events();
+            
+            //EarthResources testEarth = new EarthResources();
             //TitleScene testTitle = new TitleScene();
             //AlphaCentari testEarth = new AlphaCentari();
-            testEarth.EarthMetals();
-            testEarth.EarthFabric();
-            testEarth.EarthGemstone();
-            testEarth.EarthSupply();
+            //testEarth.EarthMetals();
+            //testEarth.EarthFabric();
+            //testEarth.EarthGemstone();
+            //testEarth.EarthSupply();
         }
     }
 }

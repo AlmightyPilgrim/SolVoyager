@@ -8,7 +8,7 @@ using Vessel;
 
 namespace Planets
 {
-    class Market
+    public class Market
     {
         Metal metalPrice = new Metal();
         Fabric fabricPrice = new Fabric();
@@ -18,10 +18,10 @@ namespace Planets
 
         public string MarketDisplay(string world)
         {
-            int metal;
-            double fabric;
-            int gem;
-            int supply;
+            int metal = 0;
+            double fabric = 0;
+            int gem = 0;
+            int supply = 0;
             if (world == "Earth")
             {
                 metal = 7;
@@ -50,6 +50,7 @@ namespace Planets
                 gem = 9;
                 supply = 3;
             }
+
             Console.WriteLine("Which resource would you like to view? \n1 - Metals\t 2 - Fabrics\n3 - Gemstone\t 4 - Supplies");
             string choice = Console.ReadLine();
             switch (choice)
@@ -116,6 +117,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.platCrate(0)} platinum crates\n How many do you wish to sell");
                     int answer = int.Parse(Console.ReadLine());
                     metalTotal = metalPrice.Platinium(input);
+                    metalTotal *= answer;
                     answer *= -1;
                     vesselHold.platCrate(answer);
                     return metalTotal;                    
@@ -138,9 +140,36 @@ namespace Planets
                     return input;
             }
         }
-        public void MetalMarketBuy()
+        public int MetalMarketBuy(int input)
         {
-
+            int metalTotal;
+            Console.WriteLine("Which type of Metal: \n1 - Platinium\n2 - Palladium\n3 - Titanium");
+            string choice = Console.ReadLine();
+            switch (choice)
+            {
+                case "1":
+                    Console.WriteLine($"{vesselHold.platCrate(0)} platinum crates\n How many do you wish to sell");
+                    int answer = int.Parse(Console.ReadLine());
+                    metalTotal = metalPrice.Platinium(input);
+                    metalTotal *= answer;
+                    vesselHold.platCrate(answer);
+                    return metalTotal;
+                case "2":
+                    Console.WriteLine($"{vesselHold.palladCrate(0)} palladium crates\n How many do you wish to sell");
+                    answer = int.Parse(Console.ReadLine());
+                    metalTotal = metalPrice.Palladium(input);
+                    vesselHold.palladCrate(answer);
+                    return metalTotal;
+                case "3":
+                    Console.WriteLine($"{vesselHold.titanCrate(0)} titanium crates\n How many do you wish to sell");
+                    answer = int.Parse(Console.ReadLine());
+                    metalTotal = metalPrice.Titanium(input);
+                    vesselHold.titanCrate(answer);
+                    return metalTotal;
+                default:
+                    Console.WriteLine("Invalid Input");
+                    return input;
+            }
         }
         public void FabricBuy()
         {

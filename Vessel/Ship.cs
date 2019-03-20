@@ -11,21 +11,30 @@ namespace Vessel
     public class Ship
     {
         Creds crateTrack = new Creds();
+        int platstore = 0;
+        int palladstore = 0;
+        int titanstore = 0;
+        int silkstore = 0;
+        int cottonstore = 0;
+        int linenstore = 0;
+        int diamstore = 0;
+        int rubystore = 0;
+        int sappstore = 0;
+        int foodstore = 0;
+        int waterstore = 0;
+        int alcostore = 0;
+        int medistore = 0;
 
-        public void Crew()
-        {
-
-        }
         public int Capacity(int input)  // tracking number of crates, and limiting amount allowed
         {
             int hold = metalCapacity(1) + fabricCapacity(1) + gemCapacity(1) + supplyCapacity(1);
             hold -= input;
-            if (hold > 20)
+            if (hold > 100)
             {
                 Console.WriteLine("Overburdened, ditching crates till at max capacity of 20");
-                while (hold > 20)
+                while (hold > 100)
                 {
-                    hold--;
+                    hold -= 1;
                 }
             }
             crateTrack.Crates(hold);
@@ -57,23 +66,20 @@ namespace Vessel
 
         public int platCrate(int input)
         {
-            int store = 0;
-            store += input;
-            return store;
+            platstore += input;
+            return platstore;
         }
 
         public int palladCrate(int input)
         {
-            int store = 0;
-            store += input;
-            return store;
+            palladstore += input;
+            return palladstore;
         }
 
         public int titanCrate(int input)
         {
-            int store = 0;
-            store += input;
-            return store;
+            titanstore += input;
+            return titanstore;
         }
 
         public int fabricCapacity(int input)
@@ -99,17 +105,18 @@ namespace Vessel
             return input;
         }
 
-        public int silkCrate()
+        public int silkCrate(int input)
+        {
+
+            return ;
+        }
+
+        public int cottonCrate(int input)
         {
             return 1;
         }
 
-        public int cottonCrate()
-        {
-            return 1;
-        }
-
-        public int linenCrate()
+        public int linenCrate(int input)
         {
             return 1;
         }
@@ -137,15 +144,15 @@ namespace Vessel
             return input;
         }
 
-        public int diaCrate()
+        public int diaCrate(int input)
         {
             return 1;
         }
-        public int rubyCrate()
+        public int rubyCrate(int input)
         {
             return 1;
         }
-        public int sappCrate()
+        public int sappCrate(int input)
         {
             return 1;
         }
@@ -173,19 +180,19 @@ namespace Vessel
             return input;
         }
 
-        public int foodCrate()
+        public int foodCrate(int input)
         {
             return 1;
         }
-        public int waterCrate()
+        public int waterCrate(int input)
         {
             return 1;
         }
-        public int alcoCrate()
+        public int alcoCrate(int input)
         {
             return 1;
         }
-        public int mediCrate()
+        public int mediCrate(int input)
         {
             return 1;
         }

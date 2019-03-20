@@ -17,6 +17,10 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
+            Market testMarket = new Market();
+
+            testMarket.MarketDisplay("Earth");
+        
             EarthResources testEarth = new EarthResources();
             //TitleScene testTitle = new TitleScene();
             //AlphaCentari testEarth = new AlphaCentari();

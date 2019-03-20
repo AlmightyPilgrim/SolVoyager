@@ -84,18 +84,18 @@ namespace Vessel
 
         public int fabricCapacity(int input)
         {
-            Console.WriteLine("Which type of Metal: \n1 - Platinium\n2 - Palladium\n3 - Titanium");
+            Console.WriteLine("Which type of Metal: \n1 - Silk\n2 - Cotton\n3 - Linen");
             string choice = Console.ReadLine();
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine($" crates of platinium");
+                    Console.WriteLine($"{silkCrate(0)} crates of silk");
                     break;
                 case "2":
-                    Console.WriteLine($" crates of palladium");
+                    Console.WriteLine($"{cottonCrate(0)} crates of cotton");
                     break;
                 case "3":
-                    Console.WriteLine($" crates of titanium");
+                    Console.WriteLine($"{linenCrate(0)} crates of linen");
                     break;
                 default:
                     Console.WriteLine("Invaild Input");
@@ -107,34 +107,36 @@ namespace Vessel
 
         public int silkCrate(int input)
         {
-
-            return ;
+            silkstore += input;
+            return silkstore;
         }
 
         public int cottonCrate(int input)
         {
-            return 1;
+            cottonstore += input;
+            return cottonstore;
         }
 
         public int linenCrate(int input)
         {
-            return 1;
+            linenstore += input;
+            return linenstore;
         }
 
         public int gemCapacity(int input)
         {
-            Console.WriteLine("Which type of Metal: \n1 - Platinium\n2 - Palladium\n3 - Titanium");
+            Console.WriteLine("Which type of Metal: \n1 - Diamond\n2 - Ruby\n3 - Sapphire");
             string choice = Console.ReadLine();
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine($" crates of platinium");
+                    Console.WriteLine($"{diaCrate(0)} crates of diamond");
                     break;
                 case "2":
-                    Console.WriteLine($" crates of palladium");
+                    Console.WriteLine($"{rubyCrate(0)} crates of ruby");
                     break;
                 case "3":
-                    Console.WriteLine($" crates of titanium");
+                    Console.WriteLine($"{sappCrate(0)} crates of sapphire");
                     break;
                 default:
                     Console.WriteLine("Invaild Input");
@@ -146,31 +148,37 @@ namespace Vessel
 
         public int diaCrate(int input)
         {
-            return 1;
+            diamstore += input;
+            return diamstore;
         }
         public int rubyCrate(int input)
         {
-            return 1;
+            rubystore += input;
+            return rubystore;
         }
         public int sappCrate(int input)
         {
-            return 1;
+            sappstore += input;
+            return sappstore;
         }
 
         public int supplyCapacity(int input)
         {
-            Console.WriteLine("Which type of Metal: \n1 - Platinium\n2 - Palladium\n3 - Titanium");
+            Console.WriteLine("Which type of Metal: \n1 - Food\n2 - Water\n3 - Alcohol\n4 - Medicine");
             string choice = Console.ReadLine();
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine($" crates of platinium");
+                    Console.WriteLine($"{foodCrate(0)} crates of food");
                     break;
                 case "2":
-                    Console.WriteLine($" crates of palladium");
+                    Console.WriteLine($"{waterCrate(0)} crates of water");
                     break;
                 case "3":
-                    Console.WriteLine($" crates of titanium");
+                    Console.WriteLine($"{alcoCrate(0)} crates of alcohol");
+                    break;
+                case "4":
+                    Console.WriteLine($"{mediCrate(0)} crates of medicine");
                     break;
                 default:
                     Console.WriteLine("Invaild Input");
@@ -182,19 +190,23 @@ namespace Vessel
 
         public int foodCrate(int input)
         {
-            return 1;
+            foodstore += input;
+            return foodstore;
         }
         public int waterCrate(int input)
         {
-            return 1;
+            waterstore += input;
+            return waterstore;
         }
         public int alcoCrate(int input)
         {
-            return 1;
+            alcostore += input;
+            return alcostore;
         }
         public int mediCrate(int input)
         {
-            return 1;
+            medistore += input;
+            return medistore;
         }
 
         public double WarpEquation(int warp)

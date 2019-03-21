@@ -65,13 +65,13 @@ namespace Planets
                         string answer = Console.ReadLine();
                         if (answer == "buy")
                         {
-                            metal = MetalMarketBuy(metal) * -1;
-                            marketWallet(metal);
+                            double metalWallet = MetalMarketBuy(metal) * -1;
+                            marketWallet(metalWallet);
                         }
                         else
                         {
-                            metal = MetalMarketSell(metal);
-                            marketWallet(metal);
+                            double metalWallet = MetalMarketSell(metal);
+                            marketWallet(metalWallet);
                         }
                         break;
                     case "2"://Fabric                    
@@ -79,13 +79,13 @@ namespace Planets
                         answer = Console.ReadLine();
                         if (answer == "buy")
                         {
-                            fabric = -1 * FabricBuy(fabric);
-                            marketWallet(fabric);
+                            double fabricWallet = -1 * FabricBuy(fabric);
+                            marketWallet(fabricWallet);
                         }
                         else
                         {
-                            fabric = FabricSell(fabric);
-                            marketWallet(fabric);
+                            double fabricWallet = FabricSell(fabric);
+                            marketWallet(fabricWallet);
                         }
                         break;
                     case "3"://gemstone                    
@@ -93,13 +93,13 @@ namespace Planets
                         answer = Console.ReadLine();
                         if (answer == "buy")
                         {
-                            gem = -1 * GemstoneBuy(gem);
-                            marketWallet(gem);
+                            double gemWallet = -1 * GemstoneBuy(gem);
+                            marketWallet(gemWallet);
                         }
                         else
                         {
-                            gem = -1 * GemstoneSell(gem);
-                            marketWallet(gem);
+                            double gemWallet = -1 * GemstoneSell(gem);
+                            marketWallet(gemWallet);
                         }
                         break;
                     case "4"://supplies                 
@@ -107,13 +107,13 @@ namespace Planets
                         answer = Console.ReadLine();
                         if (answer == "buy")
                         {
-                            supply = -1 * SupplyBuy(supply);
-                            marketWallet(supply);
+                            double supplyWallet = -1 * SupplyBuy(supply);
+                            marketWallet(supplyWallet);
                         }
                         else
                         {
-                            supply = SupplySell(supply);
-                            marketWallet(supply);
+                            double supplyWallet = SupplySell(supply);
+                            marketWallet(supplyWallet);
                         }
                         break;
                 }

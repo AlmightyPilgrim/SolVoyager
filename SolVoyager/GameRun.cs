@@ -19,7 +19,7 @@ namespace SolVoyager
         TauCeti planetCeti = new TauCeti();
         PlanetDistance travelTime = new PlanetDistance();
         Ship playerShip = new Ship();
-
+        // variables for the vessel hold storage
         public void Run()
         {
             string location = "Earth";
@@ -52,7 +52,7 @@ namespace SolVoyager
                     // terminate program
                     break;
             }
-            // begin journey on Earth
+            // problem with the inventory system, not maintaining the inventory when moving to a new planet
             while (check == true)
             {
                 Console.Clear();

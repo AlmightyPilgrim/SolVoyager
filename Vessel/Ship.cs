@@ -7,7 +7,7 @@ using Resources;
 using Currency;
 
 namespace Vessel
-{
+{ 
     public class Ship
     {
         Creds crateTrack = new Creds();
@@ -233,6 +233,5 @@ namespace Vessel
             // distance / velocity gives age
             return velocity;
         }
-
     }
 }

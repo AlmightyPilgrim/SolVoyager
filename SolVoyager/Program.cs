@@ -16,7 +16,7 @@ namespace SolVoyager
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
             GameRun playRun = new GameRun();
             playRun.Run();
         }

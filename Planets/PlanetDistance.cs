@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Planets
 {
-    class PlanetDistance
+    public class PlanetDistance
     {
         Earth earthLocation = new Earth();
         TauCeti tauLocation = new TauCeti();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Planets
 {
-    class TauCeti
+    public class TauCeti
     {
         Market tauMarket = new Market();
         TauCetiResources showResources = new TauCetiResources();

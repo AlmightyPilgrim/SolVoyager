@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Planets
 {
-    class MiningColony
+    public class MiningColony
     {
         Market colonyMarket = new Market();
         MiningColonyResources showResources = new MiningColonyResources();

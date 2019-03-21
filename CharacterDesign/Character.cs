@@ -98,7 +98,7 @@ namespace CharacterDesign
                         check = true;
                         break;
                     default:
-                        Console.WriteLine("Sorry if your favorite eye color is not available");
+                        Console.WriteLine("Sorry, your favorite eye color is not available");
                         check = false;
                         break;
                 }

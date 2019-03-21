@@ -17,8 +17,11 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
-            Market testMarket = new Market();
-            testMarket.MarketDisplay("Earth");
+            Earth testEarth = new Earth();
+            testEarth.earthDisplay();
+
+            //Market testMarket = new Market();
+            //testMarket.MarketDisplay("Earth");
 
 
 

@@ -8,5 +8,44 @@ namespace Planets
 {
     class AlphaCentari
     {
+        Market centariMarket = new Market();
+        AlphaCentariResources showResources = new AlphaCentariResources();
+        public void alphaDisplay()
+        {
+            bool check = true;
+            Console.WriteLine("Welcome to Alpha Centari.");
+            Console.WriteLine("Do you wish to view the market [1], or buy and sell [2]?");
+            string answer = Console.ReadLine();
+            while (check == true)
+            {
+                if (answer == "1")
+                {
+                    centariMarket.MarketDisplay("Alpha");
+                }
+                else if (answer == "2")
+                {
+                    showResources.CentariMetals();
+                    showResources.CentariFabric();
+                    showResources.CentariGemstone();
+                    showResources.CentariSupply();
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Input, try again");
+                }
+
+                Console.WriteLine("Do you wish to view market now [1], or leave planet [2]?");
+                answer = Console.ReadLine();
+                if (answer == "1")
+                {
+                }
+                else
+                {
+                    Console.WriteLine("Leaving Planet now.");
+                    check = false;
+                }
+            }
+            Console.Clear();
+        }
     }
 }

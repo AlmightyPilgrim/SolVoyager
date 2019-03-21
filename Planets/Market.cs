@@ -145,21 +145,21 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.platCrate(0)} platinum crates\n How many do you wish to buy");
                     int answer = int.Parse(Console.ReadLine());
                     metalTotal = metalPrice.Platinium(metalMod);
-                    metalTotal = metalTotal * answer;
+                    metalTotal *= answer;
                     vesselHold.platCrate(answer);
                     return metalTotal;
                 case "2":
                     Console.WriteLine($"{vesselHold.palladCrate(0)} palladium crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
                     metalTotal = metalPrice.Palladium(metalMod);
-                    metalTotal = metalTotal * answer;
+                    metalTotal *= answer;
                     vesselHold.palladCrate(answer);
                     return metalTotal;
                 case "3":
                     Console.WriteLine($"{vesselHold.titanCrate(0)} titanium crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
                     metalTotal = metalPrice.Titanium(metalMod);
-                    metalTotal = metalTotal * answer;
+                    metalTotal *= answer;
                     vesselHold.titanCrate(answer);
                     return metalTotal;
                 default:

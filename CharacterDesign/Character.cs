@@ -14,8 +14,7 @@ namespace CharacterDesign
         double age = Math.Round(20.00, 2);
 
         public void Gender()
-        {
-            string done = "done";
+        {            
             bool check = false;
             while (check == false)
             {

@@ -24,6 +24,7 @@ namespace Vessel
         int waterstore = 0;
         int alcostore = 0;
         int medistore = 0;
+        double wallet = 10000;
 
         public int Capacity(int input)  // tracking number of crates, and limiting amount allowed
         {
@@ -209,14 +210,27 @@ namespace Vessel
             return medistore;
         }
 
-        public double WarpEquation(int warp)
+        // the players wallet
+        public double playerWallet(double input)
+        {
+            wallet += input;
+            wallet = Math.Round(wallet);
+            if (wallet < 0)
+            {
+                Console.Clear();
+                Console.WriteLine("You have overspent");
+            }
+            return wallet;
+        }
+
+        public double WarpEquation()
         {
             double x = 10 / 3.0;
             double y = -11 / 3.0;
-            warp = 5;
+            int warp = 5;
             double z = 10 - warp;
             double velocity = (Math.Pow(warp, x)) + (Math.Pow(z, y));
-            Console.WriteLine($"Warp speed is {velocity}");
+            Console.WriteLine($"Warp speed is {velocity}");  // distance / velocity gives age
             return velocity;
         }
 

@@ -163,7 +163,11 @@ namespace CharacterDesign
                 {
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("story");
+                    Console.WriteLine("Just a small town girl of very small stature living in a lonely world. " +
+                        " Oddly, she has lived a normal and comfortable life despite her short comings. All that changed however," +
+                        " when she ran away from home at the age of 15. She wandered Earth until she found her place amongst a traveling " +
+                        "circus show. Now ten years later she is seeking a new dream to travel in space.  Your dream will soon become true " +
+                        "as you have decided to stow away in a merchant space cargo ship. With a knife in hand you will soon be able to live your dreams.");
                     Console.ResetColor();
 
                     Console.WriteLine("\nB: Back | Enter: Select Character");
@@ -183,7 +187,11 @@ namespace CharacterDesign
                 {
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("story");
+                    Console.WriteLine("You are just, reliable, and very level headed. This isn't too surprising considering someone in your position." +
+                        "Born into a successful family in an important capital.You lived without worry until you were about 19 years old" +
+                        "and had to move out of your parents' house. You have moved out and have made a lot of friends.With a great deal of determination," +
+                        "You fulfilled your dreams in a large expanding world.There's nothing to stop you from climbing to the top. You have recently decided" +
+                        "to try your hand in the space trading industry and have purchased a merchant ship. With a willingness to make it on your own it is now your time to explore and trade amongst the stars.");
                     Console.ResetColor();
                     Console.WriteLine("\nB: Back | Enter: Select Character");
                     var selectCharacter = Console.ReadLine();

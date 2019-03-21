@@ -22,9 +22,14 @@ namespace RandomEvents
             "Find abondoned ship. One of your shipmates is killed searching the wreckage. You must hire another shipmate(Cost 500 creds)", "Proceed to destination", "Keep on trucking",
             "Safe Travels", "You're on your way to greatness", "You took a wrong turn. Return back to previous destination...Check the coordinates next time", "Entered the wrong coordinates (Lose .5 a year)",
             "Can't seem to find your lucky socks...hmmm must be space gnomes", "Space twister in zero gravity = family fun night...Continue to destination"};
-          
 
-            return events[rnd.Next(0, events.Length)];
+
+            Console.WriteLine(events[rnd.Next(0, events.Length)]);
+            var result = Console.ReadLine();
+            return result;
+            
+           
+           
 
             
         }

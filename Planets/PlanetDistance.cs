@@ -13,19 +13,19 @@ namespace Planets
             return 0;
         }
 
-        public double TauCetiDistances()
-        {
+        //public double TauCetiDistances()
+        //{
 
-        }
+        //}
 
-        public double ColonyDistances()
-        {
+        //public double ColonyDistances()
+        //{
 
-        }
+        //}
 
-        public double CentariDistances()
-        {
+        //public double CentariDistances()
+        //{
 
-        }
+        //}
     }
 }

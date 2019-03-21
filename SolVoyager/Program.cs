@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Currency;
 using Resources;
-using Planets;
+
 using Vessel;
 using CharacterDesign;
 using RandomEvents;
@@ -17,14 +17,16 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
-            Title testTitle = new Title();
-            testTitle.CenteredString();
-            Ship testShip = new Ship();
-            testShip.WarpEquation();
+            Events testEvent = new Events();
+            testEvent.RandomEvents();
+            //Title testTitle = new Title();
+            //testTitle.CenteredString();
+            //Ship testShip = new Ship();
+            //testShip.WarpEquation();
 
 
-            Earth testEarth = new Earth();
-            testEarth.earthDisplay();
+            //Earth testEarth = new Earth();
+            //testEarth.earthDisplay();
 
             //Market testMarket = new Market();
             //testMarket.MarketDisplay("Earth");

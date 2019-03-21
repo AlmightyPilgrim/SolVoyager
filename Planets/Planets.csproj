@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlphaCentari.cs" />
+    <Compile Include="PlanetDistance.cs" />
     <Compile Include="Earth.cs" />
     <Compile Include="Market.cs" />
     <Compile Include="TauCeti.cs" />

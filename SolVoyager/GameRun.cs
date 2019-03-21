@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Currency;
-using Resources;
 using Planets;
 using Vessel;
 using CharacterDesign;
@@ -12,7 +10,7 @@ using CharacterDesign;
 
 namespace SolVoyager
 {
-    class GameRun
+    public class GameRun
     {
         Character playerTrader = new Character();
         Earth planetEarth = new Earth();

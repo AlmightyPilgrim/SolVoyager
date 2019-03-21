@@ -53,7 +53,7 @@ namespace Planets
                 gem = 9;
                 supply = 3;
             }
-
+            Console.WriteLine(vesselHold.playerWallet(0));
             while (check == true)
             {
                 Console.WriteLine("Which resource would you like to view? \n1 - Metals\t 2 - Fabrics\n3 - Gemstone\t 4 - Supplies");
@@ -84,7 +84,7 @@ namespace Planets
                         }
                         else
                         {
-                            fabric = FabricBuy(fabric);
+                            fabric = FabricSell(fabric);
                             marketWallet(fabric);
                         }
                         break;
@@ -98,7 +98,7 @@ namespace Planets
                         }
                         else
                         {
-                            gem = GemstoneSell(gem);
+                            gem = -1 * GemstoneSell(gem);
                             marketWallet(gem);
                         }
                         break;
@@ -117,7 +117,6 @@ namespace Planets
                         }
                         break;
                 }
-                Console.Clear();
                 Console.WriteLine("Do you wish to view additional resources?\n\ty/n");
                 string decision = Console.ReadLine();
                 if (decision == "y")
@@ -127,6 +126,7 @@ namespace Planets
                 {
                     check = false;
                 }
+                Console.Clear();
             }
             return world;
         }
@@ -145,19 +145,21 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.platCrate(0)} platinum crates\n How many do you wish to buy");
                     int answer = int.Parse(Console.ReadLine());
                     metalTotal = metalPrice.Platinium(metalMod);
-                    metalTotal *= answer;
+                    metalTotal = metalTotal * answer;
                     vesselHold.platCrate(answer);
                     return metalTotal;
                 case "2":
                     Console.WriteLine($"{vesselHold.palladCrate(0)} palladium crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
                     metalTotal = metalPrice.Palladium(metalMod);
+                    metalTotal = metalTotal * answer;
                     vesselHold.palladCrate(answer);
                     return metalTotal;
                 case "3":
                     Console.WriteLine($"{vesselHold.titanCrate(0)} titanium crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
                     metalTotal = metalPrice.Titanium(metalMod);
+                    metalTotal = metalTotal * answer;
                     vesselHold.titanCrate(answer);
                     return metalTotal;
                 default:
@@ -176,7 +178,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.platCrate(0)} platinum crates\n How many do you wish to sell");
                     int answer = int.Parse(Console.ReadLine());
                     metalTotal = metalPrice.Platinium(metalMod);
-                    metalTotal *= answer;
+                    metalTotal = metalTotal * answer;
                     answer *= -1;
                     vesselHold.platCrate(answer);
                     return metalTotal;                    
@@ -184,6 +186,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.palladCrate(0)} palladium crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
                     metalTotal = metalPrice.Palladium(metalMod);
+                    metalTotal = metalTotal * answer;
                     answer *= -1;
                     vesselHold.palladCrate(answer);
                     return metalTotal;
@@ -191,6 +194,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.titanCrate(0)} titanium crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
                     metalTotal = metalPrice.Titanium(metalMod);
+                    metalTotal = metalTotal * answer;
                     answer *= -1;
                     vesselHold.titanCrate(answer);
                     return metalTotal;
@@ -210,19 +214,21 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.silkCrate(0)} silk crates\n How many do you wish to buy");
                     int answer = int.Parse(Console.ReadLine());
                     fabricTotal = fabricPrice.Silk(fabricMod);
-                    fabricTotal *= answer;
+                    fabricTotal = fabricTotal * answer;
                     vesselHold.silkCrate(answer);
                     return fabricTotal;
                 case "2":
                     Console.WriteLine($"{vesselHold.cottonCrate(0)} cotton crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
                     fabricTotal = fabricPrice.Cotton(fabricMod);
+                    fabricTotal = fabricTotal * answer;
                     vesselHold.cottonCrate(answer);
                     return fabricTotal;
                 case "3":
                     Console.WriteLine($"{vesselHold.linenCrate(0)} linen crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
                     fabricTotal = fabricPrice.Linen(fabricMod);
+                    fabricTotal = fabricTotal * answer;
                     vesselHold.linenCrate(answer);
                     return fabricTotal;
                 default:
@@ -241,7 +247,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.silkCrate(0)} silk crates\n How many do you wish to sell");
                     int answer = int.Parse(Console.ReadLine());
                     fabricTotal = fabricPrice.Silk(fabricMod);
-                    fabricTotal *= answer;
+                    fabricTotal = fabricTotal * answer;
                     answer *= -1;
                     vesselHold.silkCrate(answer);
                     return fabricTotal;
@@ -249,6 +255,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.cottonCrate(0)} cotton crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
                     fabricTotal = fabricPrice.Cotton(fabricMod);
+                    fabricTotal = fabricTotal * answer;
                     answer *= -1;
                     vesselHold.cottonCrate(answer);
                     return fabricTotal;
@@ -256,6 +263,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.linenCrate(0)} linen crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
                     fabricTotal = fabricPrice.Linen(fabricMod);
+                    fabricTotal = fabricTotal * answer;
                     answer *= -1;
                     vesselHold.linenCrate(answer);
                     return fabricTotal;
@@ -275,19 +283,21 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.diaCrate(0)} diamond crates\n How many do you wish to buy");
                     int answer = int.Parse(Console.ReadLine());
                     gemTotal = gemstonePrice.Diamond(gemMod);
-                    gemTotal *= answer;
+                    gemTotal = gemTotal * answer;
                     vesselHold.diaCrate(answer);
                     return gemTotal;
                 case "2":
                     Console.WriteLine($"{vesselHold.rubyCrate(0)} ruby crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
                     gemTotal = gemstonePrice.Ruby(gemMod);
+                    gemTotal = gemTotal * answer;
                     vesselHold.rubyCrate(answer);
                     return gemTotal;
                 case "3":
                     Console.WriteLine($"{vesselHold.sappCrate(0)} sapphire crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
                     gemTotal = gemstonePrice.Sapphire(gemMod);
+                    gemTotal = gemTotal * answer;
                     vesselHold.sappCrate(answer);
                     return gemTotal;
                 default:
@@ -314,6 +324,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.rubyCrate(0)} ruby crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
                     gemTotal = gemstonePrice.Ruby(gemMod);
+                    gemTotal *= answer;
                     answer *= -1;
                     vesselHold.rubyCrate(answer);
                     return gemTotal;
@@ -321,6 +332,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.sappCrate(0)} sapphire crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
                     gemTotal = gemstonePrice.Sapphire(gemMod);
+                    gemTotal *= answer;
                     answer *= -1;
                     vesselHold.sappCrate(answer);
                     return gemTotal;
@@ -340,25 +352,28 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.foodCrate(0)} food crates\n How many do you wish to buy");
                     int answer = int.Parse(Console.ReadLine());
                     supplyTotal = supplyPrice.Food(supplyMod);
-                    supplyTotal *= answer;
+                    supplyTotal = supplyTotal * answer;
                     vesselHold.foodCrate(answer);
                     return supplyTotal;
                 case "2":
                     Console.WriteLine($"{vesselHold.waterCrate(0)} water crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
                     supplyTotal = supplyPrice.Water(supplyMod);
+                    supplyTotal = supplyTotal * answer;
                     vesselHold.waterCrate(answer);
                     return supplyTotal;
                 case "3":
                     Console.WriteLine($"{vesselHold.alcoCrate(0)} alcohol crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
                     supplyTotal = supplyPrice.Alcohol(supplyMod);
+                    supplyTotal = supplyTotal * answer;
                     vesselHold.alcoCrate(answer);
                     return supplyTotal;
                 case "4":
                     Console.WriteLine($"{vesselHold.mediCrate(0)} medicine crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
                     supplyTotal = supplyPrice.Medicine(supplyMod);
+                    supplyTotal = supplyTotal * answer;
                     vesselHold.mediCrate(answer);
                     return supplyTotal;
                 default:
@@ -377,7 +392,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.foodCrate(0)} food crates\n How many do you wish to sell");
                     int answer = int.Parse(Console.ReadLine());
                     supplyTotal = supplyPrice.Food(supplyMod);
-                    supplyTotal *= answer;
+                    supplyTotal = supplyTotal * answer;
                     answer *= -1;
                     vesselHold.foodCrate(answer);
                     return supplyTotal;
@@ -385,6 +400,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.waterCrate(0)} water crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
                     supplyTotal = supplyPrice.Water(supplyMod);
+                    supplyTotal = supplyTotal * answer;
                     answer *= -1;
                     vesselHold.waterCrate(answer);
                     return supplyTotal;
@@ -392,6 +408,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.alcoCrate(0)} alcohol crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
                     supplyTotal = supplyPrice.Alcohol(supplyMod);
+                    supplyTotal = supplyTotal * answer;
                     answer *= -1;
                     vesselHold.alcoCrate(answer);
                     return supplyTotal;
@@ -399,6 +416,7 @@ namespace Planets
                     Console.WriteLine($"{vesselHold.mediCrate(0)} medicine crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
                     supplyTotal = supplyPrice.Medicine(supplyMod);
+                    supplyTotal = supplyTotal * answer;
                     answer *= -1;
                     vesselHold.mediCrate(answer);
                     return supplyTotal;
@@ -412,7 +430,7 @@ namespace Planets
         public double marketWallet(double price)
         {
             double walletAmount = vesselHold.playerWallet(price); // needs an actual value
-            Console.WriteLine(walletAmount);
+            Console.WriteLine($"{walletAmount} credits remaining");
             return walletAmount;
         }
     }

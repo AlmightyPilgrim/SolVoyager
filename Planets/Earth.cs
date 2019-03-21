@@ -7,9 +7,13 @@ using Resources;
 
 namespace Planets
 {
-    class Earth
+    public class Earth
     {
-        EarthResources materialsEarth = new EarthResources();
+        Market earthMarket = new Market();
+        public void earthDisplay()
+        {
+
+        }
 
     }
 }

@@ -14,7 +14,7 @@ namespace Planets
         {
             bool check = true;
             Console.WriteLine("Welcome to the Mining Colony.");
-            Console.WriteLine("Do you wish to view the market [1], or buy and sell [2]?");
+            Console.WriteLine("Do you wish to buy and sell [1], or view the market [2]?");
             string answer = Console.ReadLine();
             while (check == true)
             {

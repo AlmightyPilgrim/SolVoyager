@@ -48,7 +48,7 @@ namespace CharacterDesign
         public string Name()
         {
             Console.WriteLine("Enter your characters name");
-            name = Console.ReadLine();
+            string name = Console.ReadLine();
             return name;
         }
 

@@ -168,7 +168,16 @@ namespace SolVoyager
                         break;                    
                 }
 
+                Console.WriteLine("Do you wish to go to contine? y/n");
+                string answer = Console.ReadLine();
+                if (answer == "y")
+                {
 
+                }
+                else
+                {
+                    check = false;
+                }
             }
         }
     }

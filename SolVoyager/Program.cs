@@ -20,3 +20,5 @@ namespace SolVoyager
             GameRun playRun = new GameRun();
             playRun.Run();
         }
+    }
+}

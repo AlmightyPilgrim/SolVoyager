@@ -46,7 +46,7 @@ namespace Planets
                 gem = 2;
                 supply = 8;
             }
-            else if (world == "Mars")
+            else if (world == "Tau Ceti")
             {
                 metal = 5;
                 fabric = 5;

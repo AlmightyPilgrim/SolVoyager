@@ -161,148 +161,148 @@ namespace Planets // Resources
         }
     }
 
-    public class MarsResources // base modifiers: metal - 3, fabric - 3, gemstone - 6, supply - 4
+    public class TauCetiResources // base modifiers: metal - 3, fabric - 3, gemstone - 6, supply - 4
     {
-        Metal metalMarsCost = new Metal();
-        Fabric fabricMarsCost = new Fabric();
-        Gemstones gemstoneMarsCost = new Gemstones();
-        Supplies supplyMarsCost = new Supplies();
+        Metal metaTauCost = new Metal();
+        Fabric fabricTauCost = new Fabric();
+        Gemstones gemstoneTauCost = new Gemstones();
+        Supplies supplyTauCost = new Supplies();
 
-        public int MarsPlatinium()
+        public int TauPlatinium()
         {
             int basevalue = 3 + 2;
-            int marsPlatinium = metalMarsCost.Platinium(basevalue);
-            return marsPlatinium;
+            int tauPlatinium = metaTauCost.Platinium(basevalue);
+            return tauPlatinium;
         }
 
-        public int MarsPalladium()
+        public int TauPalladium()
         {
             int basevalue = 3 + 2;
-            int marsPalladium = metalMarsCost.Palladium(basevalue);
-            return marsPalladium;
+            int tauPalladium = metaTauCost.Palladium(basevalue);
+            return tauPalladium;
         }    //separating the subtypes of resources to be able to pull individually
 
-        public int MarsTitanium()
+        public int TauTitanium()
         {
             int basevalue = 3 + 2;
-            int marsTitanium = metalMarsCost.Titanium(basevalue);
-            return marsTitanium;
+            int tauTitanium = metaTauCost.Titanium(basevalue);
+            return tauTitanium;
         }
 
-        public void MarsMetals() // above average modifier
+        public void TauMetals() // above average modifier
         {
-            int marsPlatinium = MarsPlatinium();
-            int marsPalladium = MarsPalladium();
-            int marsTitanium = MarsTitanium();
+            int tauPlatinium = TauPlatinium();
+            int tauPalladium = TauPalladium();
+            int tauTitanium = TauTitanium();
 
-            Console.WriteLine($"{marsPlatinium} - Platinium value on Mars\n" +
-                $"{marsPalladium} - Palladium value on Mars\n" +
-                $"{marsTitanium} - Titanium value on Mars");
+            Console.WriteLine($"{tauPlatinium} - Platinium value on Tau Ceti\n" +
+                $"{tauPalladium} - Palladium value on Tau Ceti\n" +
+                $"{tauTitanium} - Titanium value on Tau Ceti");
         }
 
-        public double MarsSilk()
-        {
-            int basevalue = 3 + 2;
-            double marsSilk = fabricMarsCost.Silk(basevalue);
-            return marsSilk;
-        }
-
-        public double MarsCotton()
+        public double TauSilk()
         {
             int basevalue = 3 + 2;
-            double marsCotton = fabricMarsCost.Cotton(basevalue);
-            return marsCotton;
+            double TauSilk = fabricTauCost.Silk(basevalue);
+            return TauSilk;
         }
 
-        public double MarsLinen()
+        public double TauCotton()
         {
             int basevalue = 3 + 2;
-            double marsLinen = fabricMarsCost.Linen(basevalue);
-            return marsLinen;
+            double TauCotton = fabricTauCost.Cotton(basevalue);
+            return TauCotton;
         }
 
-        public void MarsFabric() // above average modifier
+        public double TauLinen()
         {
-            double marsSilk = MarsSilk();
-            double marsCotton = MarsCotton();
-            double marsLinen = MarsLinen();
-
-            Console.WriteLine($"{marsSilk} - Silk value on Mars\n" +
-                $"{marsCotton} - Cotton value on Mars\n" +
-                $"{marsLinen} - Linen value on Mars");
+            int basevalue = 3 + 2;
+            double tauLinen = fabricTauCost.Linen(basevalue);
+            return tauLinen;
         }
 
-        public int MarsDiamond()
+        public void TauFabric() // above average modifier
+        {
+            double tauSilk = this.TauSilk();
+            double tauCotton = this.TauCotton();
+            double tauLinen = TauLinen();
+
+            Console.WriteLine($"{tauSilk} - Silk value on Tau Ceti\n" +
+                $"{tauCotton} - Cotton value on Tau Ceti\n" +
+                $"{tauLinen} - Linen value on Tau Ceti");
+        }
+
+        public int TauDiamond()
         {
             int basevalue = 6 + 3;
-            int marsDiamond = gemstoneMarsCost.Diamond(basevalue);
-            return marsDiamond;
+            int tauDiamond = gemstoneTauCost.Diamond(basevalue);
+            return tauDiamond;
         }
 
-        public int MarsRuby()
+        public int TauRuby()
         {
             int basevalue = 6 + 3;
-            int marsRuby = gemstoneMarsCost.Ruby(basevalue);
-            return marsRuby;
+            int tauRuby = gemstoneTauCost.Ruby(basevalue);
+            return tauRuby;
         }
 
-        public int MarsSapphire()
+        public int TauSapphire()
         {
             int basevalue = 6 + 3;
-            int marsSapphire = gemstoneMarsCost.Sapphire(basevalue);
-            return marsSapphire;
+            int tauSapphire = gemstoneTauCost.Sapphire(basevalue);
+            return tauSapphire;
         }
 
-        public void MarsGemstone() // high modifier
+        public void TauGemstone() // high modifier
         {
-            int marsDiamond = MarsDiamond();
-            int marsRuby = MarsRuby();
-            int marsSapphire = MarsSapphire();
+            int tauDiamond = TauDiamond();
+            int tauRuby = TauRuby();
+            int tauSapphire = TauSapphire();
 
-            Console.WriteLine($"{marsDiamond} - Diamond value on Mars\n" +
-                $"{marsRuby} - Ruby value on Mars\n" +
-                $"{marsSapphire} - Sapphire value on Mars");
+            Console.WriteLine($"{tauDiamond} - Diamond value on Tau Ceti\n" +
+                $"{tauRuby} - Ruby value on Tau Ceti\n" +
+                $"{tauSapphire} - Sapphire value on Tau Ceti");
         }
 
-        public double MarsFood()
-        {
-            int basevalue = 2 + 1;
-            double marsFood = supplyMarsCost.Food(basevalue);
-            return marsFood;
-        }
-
-        public double MarsWater()
+        public double TauFood()
         {
             int basevalue = 2 + 1;
-            double marsWater = supplyMarsCost.Water(basevalue);
-            return marsWater;
+            double tauFood = supplyTauCost.Food(basevalue);
+            return tauFood;
         }
 
-        public double MarsAlcohol()
+        public double TauWater()
         {
             int basevalue = 2 + 1;
-            double marsAlcohol = supplyMarsCost.Alcohol(basevalue);
-            return marsAlcohol;
+            double tauWater = supplyTauCost.Water(basevalue);
+            return tauWater;
         }
 
-        public double MarsMedicine()
+        public double TauAlcohol()
         {
             int basevalue = 2 + 1;
-            double marsMedicine = supplyMarsCost.Medicine(basevalue);
-            return marsMedicine;
+            double tauAlcohol = supplyTauCost.Alcohol(basevalue);
+            return tauAlcohol;
         }
 
-        public void MarsSupply() // standard modifier
+        public double TauMedicine()
         {
-            double marsFood = MarsFood();
-            double marsWater = MarsWater();
-            double marsAlcohol = MarsAlcohol();
-            double marsMedicine = MarsMedicine();
+            int basevalue = 2 + 1;
+            double tauMedicine = supplyTauCost.Medicine(basevalue);
+            return tauMedicine;
+        }
 
-            Console.WriteLine($"{marsFood} - Food value on Mars\n" +
-                $"{marsWater} - Water value on Mars\n" +
-                $"{marsAlcohol} - Alcohol value on Mars\n" +
-                $"{marsMedicine} - Medicine value on Mars");
+        public void TauSupply() // standard modifier
+        {
+            double tauFood = TauFood();
+            double tauWater = TauWater();
+            double tauAlcohol = TauAlcohol();
+            double tauMedicine = TauMedicine();
+
+            Console.WriteLine($"{tauFood} - Food value on Tau Ceti\n" +
+                $"{tauWater} - Water value on Tau Ceti\n" +
+                $"{tauAlcohol} - Alcohol value on Tau Ceti\n" +
+                $"{tauMedicine} - Medicine value on Tau Ceti");
         }
     }   
     
@@ -412,8 +412,8 @@ namespace Planets // Resources
         public double ColonyFood()
         {
             int basevalue = 5 + 3;
-            double marsFood = supplyColonyCost.Food(basevalue);
-            return marsFood;
+            double colonyFood = supplyColonyCost.Food(basevalue);
+            return colonyFood;
         }
 
         public double ColonyWater()

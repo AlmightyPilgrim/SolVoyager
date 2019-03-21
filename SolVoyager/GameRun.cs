@@ -26,6 +26,8 @@ namespace SolVoyager
             // Into buying your first resource to trade to another system
             // display the base prices for resources
             // slowly increase payloads with longer play, forced to start with 1 maybe 2 crates
+            playerTrader.Gender();
+
         }
     }
 }

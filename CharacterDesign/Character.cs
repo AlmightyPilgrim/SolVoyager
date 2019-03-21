@@ -13,13 +13,13 @@ namespace CharacterDesign
         string characterStart = "Earth";
         double age = Math.Round(20.00, 2);
 
-        public string Gender(string x)
+        public void Gender()
         {
             bool check = false;
             while (check == false)
             {
                 Console.WriteLine("What gender is your character?\n\t\t1 - Male\n\t\t2 - Female\n\t\tQ - Quit");
-                x = Console.ReadLine();
+                string x = Console.ReadLine();
                 switch (x)
                 {
                     case "1":
@@ -40,75 +40,6 @@ namespace CharacterDesign
                         break;
                 }
             }   
-            return x;
-        }
-
-        public string Hair(string y)
-        {
-            bool check = false;
-            while (check == false)
-            {
-                Console.WriteLine("Character hair color:\n1 - Brown\t2 - Scarlett\n3 - Black\t4 - White");
-                y = Console.ReadLine();
-                switch (y)
-                {
-                    case "1":
-                        Console.WriteLine("You have brown hair.");
-                        check = true;
-                        break;
-                    case "2":
-                        Console.WriteLine("You have scarlett hair.");
-                        check = true;
-                        break;
-                    case "3":
-                        Console.WriteLine("You have black hair.");
-                        check = true;
-                        break;
-                    case "4":
-                        Console.WriteLine("You have white hair.");
-                        check = true;
-                        break;
-                    default:
-                        Console.WriteLine("Sorry if your favorite hair color is not available");
-                        check = false;
-                        break;
-                }
-            }
-            return y;
-        }
-
-        public string Eyes(string z)
-        {
-            bool check = false;
-            while (check == false)
-            {
-                Console.WriteLine("Character Eye color:\n1 - Brown\t2 - Red\n3 - Blue\t4 - Grey");
-                z = Console.ReadLine();
-                switch (z)
-                {
-                    case "1":
-                        Console.WriteLine("You have brown eyes.");
-                        check = true;
-                        break;
-                    case "2":
-                        Console.WriteLine("You have red eyes.");
-                        check = true;
-                        break;
-                    case "3":
-                        Console.WriteLine("You have blue eyes.");
-                        check = true;
-                        break;
-                    case "4":
-                        Console.WriteLine("You have grey eyes.");
-                        check = true;
-                        break;
-                    default:
-                        Console.WriteLine("Sorry, your favorite eye color is not available");
-                        check = false;
-                        break;
-                }
-            }
-            return z;
         }
 
         public string Name(string name)

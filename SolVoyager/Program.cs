@@ -17,10 +17,7 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
-            
-             Events events = new Events();
-            
-            //EarthResources testEarth = new EarthResources();
+            // EarthResources testEarth = new EarthResources();
             //TitleScene testTitle = new TitleScene();
             //AlphaCentari testEarth = new AlphaCentari();
             //testEarth.EarthMetals();

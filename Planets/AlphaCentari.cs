@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Planets
 {
-    class AlphaCentari
+    public class AlphaCentari
     {
         Market centariMarket = new Market();
         AlphaCentariResources showResources = new AlphaCentariResources();

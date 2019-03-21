@@ -6,26 +6,47 @@ using System.Threading.Tasks;
 
 namespace Planets
 {
-    class PlanetDistance
+    public class PlanetDistance
     {
-        public double EarthDistances()
+        Earth earthLocation = new Earth();
+        TauCeti tauLocation = new TauCeti();
+        MiningColony colonyLocation = new MiningColony();
+        AlphaCentari centariLocation = new AlphaCentari();
+
+        public double EarthtoTauCeti()
         {
-            return 0;
+            double distance = tauLocation.TauCetiLocation() - earthLocation.EarthLocation();
+            return distance;
         }
 
-        //public double TauCetiDistances()
-        //{
+        public double EarthtoColony()
+        {
+            double distance = colonyLocation.ColonyLocation() - earthLocation.EarthLocation();
+            return distance;
+        }
 
-        //}
+        public double EarthtoCentari()
+        {
+            double distance = centariLocation.AlphaLocation() - earthLocation.EarthLocation();
+            return distance;
+        }
 
-        //public double ColonyDistances()
-        //{
+        public double TauCetitoColony()
+        {
+            double distance = tauLocation.TauCetiLocation() - colonyLocation.ColonyLocation();
+            return distance;
+        }
 
-        //}
+        public double TauCetitoCentari()
+        {
+            double distance = tauLocation.TauCetiLocation() - centariLocation.AlphaLocation();
+            return distance;
+        }
 
-        //public double CentariDistances()
-        //{
-
-        //}
+        public double ColonytoCentari()
+        {
+            double distance = colonyLocation.ColonyLocation() - centariLocation.AlphaLocation();
+            return distance;
+        }
     }
 }

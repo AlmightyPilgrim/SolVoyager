@@ -8,7 +8,7 @@ namespace Currency
 {
     public class Creds
     {
-        int box = 5;
+        int box = 10;
 
         public int MetalCreds(int chosenMetal) //metal gets a base modifier of 2
         {

@@ -16,8 +16,11 @@ namespace Planets
         Supplies supplyPrice = new Supplies();
         Ship vesselHold = new Ship();
 
+        // include loops in the display incase of trying to view multiple types as well
+        // also making it so they dont go to ship and back to planet
         public string MarketDisplay(string world)
         {
+            bool check = true;
             int metal = 0;
             double fabric = 0;
             int gem = 0;
@@ -51,63 +54,87 @@ namespace Planets
                 supply = 3;
             }
 
-            Console.WriteLine("Which resource would you like to view? \n1 - Metals\t 2 - Fabrics\n3 - Gemstone\t 4 - Supplies");
-            string choice = Console.ReadLine();
-            switch (choice)
+            while (check == true)
             {
-                case "1": //Metal selection buy/sell                    
-                    Console.WriteLine("Do you wish to buy or sell?");
-                    string answer = Console.ReadLine();
-                    if (answer == "buy")
-                    {
-                        MetalMarketBuy(metal);
-                    }
-                    else
-                    {
-                        MetalMarketSell(metal);
-                    }
-                    break;
-                case "2"://Fabric                    
-                    Console.WriteLine("Do you wish to buy or sell?");
-                    answer = Console.ReadLine();
-                    if (answer == "buy")
-                    {
-                        FabricBuy(fabric);
-                    }
-                    else
-                    {
-                        FabricBuy(fabric);
-                    }
-                    break;
-                case "3"://gemstone                    
-                    Console.WriteLine("Do you wish to buy or sell?");
-                    answer = Console.ReadLine();
-                    if (answer == "buy")
-                    {
-                        GemstoneBuy(gem);
-                    }
-                    else
-                    {
-                        GemstoneSell(gem);
-                    }
-                    break;
-                case "4"://supplies                 
-                    Console.WriteLine("Do you wish to buy or sell?");
-                    answer = Console.ReadLine();
-                    if (answer == "buy")
-                    {
-                        SupplyBuy(supply);
-                    }
-                    else
-                    {
-                        SupplySell(supply);
-                    }
-                    break;
+                Console.WriteLine("Which resource would you like to view? \n1 - Metals\t 2 - Fabrics\n3 - Gemstone\t 4 - Supplies");
+                string choice = Console.ReadLine();
+                switch (choice)
+                {
+                    case "1": //Metal selection buy/sell                    
+                        Console.WriteLine("Do you wish to buy or sell?");
+                        string answer = Console.ReadLine();
+                        if (answer == "buy")
+                        {
+                            metal = MetalMarketBuy(metal) * -1;
+                            marketWallet(metal);
+                        }
+                        else
+                        {
+                            metal = MetalMarketSell(metal);
+                            marketWallet(metal);
+                        }
+                        break;
+                    case "2"://Fabric                    
+                        Console.WriteLine("Do you wish to buy or sell?");
+                        answer = Console.ReadLine();
+                        if (answer == "buy")
+                        {
+                            fabric = -1 * FabricBuy(fabric);
+                            marketWallet(fabric);
+                        }
+                        else
+                        {
+                            fabric = FabricBuy(fabric);
+                            marketWallet(fabric);
+                        }
+                        break;
+                    case "3"://gemstone                    
+                        Console.WriteLine("Do you wish to buy or sell?");
+                        answer = Console.ReadLine();
+                        if (answer == "buy")
+                        {
+                            gem = -1 * GemstoneBuy(gem);
+                            marketWallet(gem);
+                        }
+                        else
+                        {
+                            gem = GemstoneSell(gem);
+                            marketWallet(gem);
+                        }
+                        break;
+                    case "4"://supplies                 
+                        Console.WriteLine("Do you wish to buy or sell?");
+                        answer = Console.ReadLine();
+                        if (answer == "buy")
+                        {
+                            supply = -1 * SupplyBuy(supply);
+                            marketWallet(supply);
+                        }
+                        else
+                        {
+                            supply = SupplySell(supply);
+                            marketWallet(supply);
+                        }
+                        break;
+                }
+                Console.Clear();
+                Console.WriteLine("Do you wish to view additional resources?\n\ty/n");
+                string decision = Console.ReadLine();
+                if (decision == "y")
+                {
+                }
+                else
+                {
+                    check = false;
+                }
             }
             return world;
         }
 
-        public int MetalMarketBuy(int input)
+
+        // buy sell methods, just need to add the wallet to sad methods or in the display
+        // method, also need to include a way to monitor the both amounts.
+        public int MetalMarketBuy(int metalMod)
         {
             int metalTotal;
             Console.WriteLine("Which type of Metal: \n1 - Platinium\n2 - Palladium\n3 - Titanium");
@@ -115,30 +142,30 @@ namespace Planets
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine($"{vesselHold.platCrate(0)} platinum crates\n How many do you wish to sell");
+                    Console.WriteLine($"{vesselHold.platCrate(0)} platinum crates\n How many do you wish to buy");
                     int answer = int.Parse(Console.ReadLine());
-                    metalTotal = metalPrice.Platinium(input);
+                    metalTotal = metalPrice.Platinium(metalMod);
                     metalTotal *= answer;
                     vesselHold.platCrate(answer);
                     return metalTotal;
                 case "2":
-                    Console.WriteLine($"{vesselHold.palladCrate(0)} palladium crates\n How many do you wish to sell");
+                    Console.WriteLine($"{vesselHold.palladCrate(0)} palladium crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
-                    metalTotal = metalPrice.Palladium(input);
+                    metalTotal = metalPrice.Palladium(metalMod);
                     vesselHold.palladCrate(answer);
                     return metalTotal;
                 case "3":
-                    Console.WriteLine($"{vesselHold.titanCrate(0)} titanium crates\n How many do you wish to sell");
+                    Console.WriteLine($"{vesselHold.titanCrate(0)} titanium crates\n How many do you wish to buy");
                     answer = int.Parse(Console.ReadLine());
-                    metalTotal = metalPrice.Titanium(input);
+                    metalTotal = metalPrice.Titanium(metalMod);
                     vesselHold.titanCrate(answer);
                     return metalTotal;
                 default:
                     Console.WriteLine("Invalid Input");
-                    return input;
+                    return metalMod;
             }
         }
-        public int MetalMarketSell(int input)
+        public int MetalMarketSell(int metalMod)
         {
             int metalTotal;
             Console.WriteLine("Which type of Metal: \n1 - Platinium\n2 - Palladium\n3 - Titanium");
@@ -148,7 +175,7 @@ namespace Planets
                 case "1":
                     Console.WriteLine($"{vesselHold.platCrate(0)} platinum crates\n How many do you wish to sell");
                     int answer = int.Parse(Console.ReadLine());
-                    metalTotal = metalPrice.Platinium(input);
+                    metalTotal = metalPrice.Platinium(metalMod);
                     metalTotal *= answer;
                     answer *= -1;
                     vesselHold.platCrate(answer);
@@ -156,64 +183,64 @@ namespace Planets
                 case "2":
                     Console.WriteLine($"{vesselHold.palladCrate(0)} palladium crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
-                    metalTotal = metalPrice.Palladium(input);
+                    metalTotal = metalPrice.Palladium(metalMod);
                     answer *= -1;
                     vesselHold.palladCrate(answer);
                     return metalTotal;
                 case "3":
                     Console.WriteLine($"{vesselHold.titanCrate(0)} titanium crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
-                    metalTotal = metalPrice.Titanium(input);
+                    metalTotal = metalPrice.Titanium(metalMod);
                     answer *= -1;
                     vesselHold.titanCrate(answer);
                     return metalTotal;
                 default:
                     Console.WriteLine("Invalid Input");
-                    return input;
+                    return metalMod;
             }
         }
-        public double FabricBuy(double input)
+        public double FabricBuy(double fabricMod)
         {
             double fabricTotal;
-            Console.WriteLine("Which type of Metal: \n1 - Silk\n2 - Cotton\n3 - Linen");
+            Console.WriteLine("Which type of Fabric: \n1 - Silk\n2 - Cotton\n3 - Linen");
+            string choice = Console.ReadLine();
+            switch (choice)
+            {
+                case "1":
+                    Console.WriteLine($"{vesselHold.silkCrate(0)} silk crates\n How many do you wish to buy");
+                    int answer = int.Parse(Console.ReadLine());
+                    fabricTotal = fabricPrice.Silk(fabricMod);
+                    fabricTotal *= answer;
+                    vesselHold.silkCrate(answer);
+                    return fabricTotal;
+                case "2":
+                    Console.WriteLine($"{vesselHold.cottonCrate(0)} cotton crates\n How many do you wish to buy");
+                    answer = int.Parse(Console.ReadLine());
+                    fabricTotal = fabricPrice.Cotton(fabricMod);
+                    vesselHold.cottonCrate(answer);
+                    return fabricTotal;
+                case "3":
+                    Console.WriteLine($"{vesselHold.linenCrate(0)} linen crates\n How many do you wish to buy");
+                    answer = int.Parse(Console.ReadLine());
+                    fabricTotal = fabricPrice.Linen(fabricMod);
+                    vesselHold.linenCrate(answer);
+                    return fabricTotal;
+                default:
+                    Console.WriteLine("Invalid Input");
+                    return fabricMod;
+            }
+        }
+        public double FabricSell(double fabricMod)
+        {
+            double fabricTotal;
+            Console.WriteLine("Which type of Fabric: \n1 - Silk\n2 - Cotton\n3 - Linen");
             string choice = Console.ReadLine();
             switch (choice)
             {
                 case "1":
                     Console.WriteLine($"{vesselHold.silkCrate(0)} silk crates\n How many do you wish to sell");
                     int answer = int.Parse(Console.ReadLine());
-                    fabricTotal = fabricPrice.Silk(input);
-                    fabricTotal *= answer;
-                    vesselHold.silkCrate(answer);
-                    return fabricTotal;
-                case "2":
-                    Console.WriteLine($"{vesselHold.cottonCrate(0)} cotton crates\n How many do you wish to sell");
-                    answer = int.Parse(Console.ReadLine());
-                    fabricTotal = fabricPrice.Cotton(input);
-                    vesselHold.cottonCrate(answer);
-                    return fabricTotal;
-                case "3":
-                    Console.WriteLine($"{vesselHold.linenCrate(0)} linen crates\n How many do you wish to sell");
-                    answer = int.Parse(Console.ReadLine());
-                    fabricTotal = fabricPrice.Linen(input);
-                    vesselHold.linenCrate(answer);
-                    return fabricTotal;
-                default:
-                    Console.WriteLine("Invalid Input");
-                    return input;
-            }
-        }
-        public double FabricSell(double input)
-        {
-            double fabricTotal;
-            Console.WriteLine("Which type of Metal: \n1 - Silk\n2 - Cotton\n3 - Linen");
-            string choice = Console.ReadLine();
-            switch (choice)
-            {
-                case "1":
-                    Console.WriteLine($"{vesselHold.silkCrate(0)} silk crates\n How many do you wish to sell");
-                    int answer = int.Parse(Console.ReadLine());
-                    fabricTotal = fabricPrice.Silk(input);
+                    fabricTotal = fabricPrice.Silk(fabricMod);
                     fabricTotal *= answer;
                     answer *= -1;
                     vesselHold.silkCrate(answer);
@@ -221,64 +248,64 @@ namespace Planets
                 case "2":
                     Console.WriteLine($"{vesselHold.cottonCrate(0)} cotton crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
-                    fabricTotal = fabricPrice.Cotton(input);
+                    fabricTotal = fabricPrice.Cotton(fabricMod);
                     answer *= -1;
                     vesselHold.cottonCrate(answer);
                     return fabricTotal;
                 case "3":
                     Console.WriteLine($"{vesselHold.linenCrate(0)} linen crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
-                    fabricTotal = fabricPrice.Linen(input);
+                    fabricTotal = fabricPrice.Linen(fabricMod);
                     answer *= -1;
                     vesselHold.linenCrate(answer);
                     return fabricTotal;
                 default:
                     Console.WriteLine("Invalid Input");
-                    return input;
+                    return fabricMod;
             }
         }
-        public int GemstoneBuy(int input)
+        public int GemstoneBuy(int gemMod)
         {
             int gemTotal;
-            Console.WriteLine("Which type of Metal: \n1 - Diamond\n2 - Ruby\n3 - Sapphire");
+            Console.WriteLine("Which type of Gemstone: \n1 - Diamond\n2 - Ruby\n3 - Sapphire");
+            string choice = Console.ReadLine();
+            switch (choice)
+            {
+                case "1":
+                    Console.WriteLine($"{vesselHold.diaCrate(0)} diamond crates\n How many do you wish to buy");
+                    int answer = int.Parse(Console.ReadLine());
+                    gemTotal = gemstonePrice.Diamond(gemMod);
+                    gemTotal *= answer;
+                    vesselHold.diaCrate(answer);
+                    return gemTotal;
+                case "2":
+                    Console.WriteLine($"{vesselHold.rubyCrate(0)} ruby crates\n How many do you wish to buy");
+                    answer = int.Parse(Console.ReadLine());
+                    gemTotal = gemstonePrice.Ruby(gemMod);
+                    vesselHold.rubyCrate(answer);
+                    return gemTotal;
+                case "3":
+                    Console.WriteLine($"{vesselHold.sappCrate(0)} sapphire crates\n How many do you wish to buy");
+                    answer = int.Parse(Console.ReadLine());
+                    gemTotal = gemstonePrice.Sapphire(gemMod);
+                    vesselHold.sappCrate(answer);
+                    return gemTotal;
+                default:
+                    Console.WriteLine("Invalid Input");
+                    return gemMod;
+            }
+        }
+        public int GemstoneSell(int gemMod)
+        {
+            int gemTotal;
+            Console.WriteLine("Which type of Gemstone: \n1 - Diamond\n2 - Ruby\n3 - Sapphire");
             string choice = Console.ReadLine();
             switch (choice)
             {
                 case "1":
                     Console.WriteLine($"{vesselHold.diaCrate(0)} diamond crates\n How many do you wish to sell");
                     int answer = int.Parse(Console.ReadLine());
-                    gemTotal = gemstonePrice.Diamond(input);
-                    gemTotal *= answer;
-                    vesselHold.diaCrate(answer);
-                    return gemTotal;
-                case "2":
-                    Console.WriteLine($"{vesselHold.rubyCrate(0)} ruby crates\n How many do you wish to sell");
-                    answer = int.Parse(Console.ReadLine());
-                    gemTotal = gemstonePrice.Ruby(input);
-                    vesselHold.rubyCrate(answer);
-                    return gemTotal;
-                case "3":
-                    Console.WriteLine($"{vesselHold.sappCrate(0)} sapphire crates\n How many do you wish to sell");
-                    answer = int.Parse(Console.ReadLine());
-                    gemTotal = gemstonePrice.Sapphire(input);
-                    vesselHold.sappCrate(answer);
-                    return gemTotal;
-                default:
-                    Console.WriteLine("Invalid Input");
-                    return input;
-            }
-        }
-        public int GemstoneSell(int input)
-        {
-            int gemTotal;
-            Console.WriteLine("Which type of Metal: \n1 - Diamond\n2 - Ruby\n3 - Sapphire");
-            string choice = Console.ReadLine();
-            switch (choice)
-            {
-                case "1":
-                    Console.WriteLine($"{vesselHold.diaCrate(0)} diamond crates\n How many do you wish to sell");
-                    int answer = int.Parse(Console.ReadLine());
-                    gemTotal = gemstonePrice.Diamond(input);
+                    gemTotal = gemstonePrice.Diamond(gemMod);
                     gemTotal *= answer;
                     answer *= -1;
                     vesselHold.diaCrate(answer);
@@ -286,99 +313,107 @@ namespace Planets
                 case "2":
                     Console.WriteLine($"{vesselHold.rubyCrate(0)} ruby crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
-                    gemTotal = gemstonePrice.Ruby(input);
+                    gemTotal = gemstonePrice.Ruby(gemMod);
                     answer *= -1;
                     vesselHold.rubyCrate(answer);
                     return gemTotal;
                 case "3":
                     Console.WriteLine($"{vesselHold.sappCrate(0)} sapphire crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
-                    gemTotal = gemstonePrice.Sapphire(input);
+                    gemTotal = gemstonePrice.Sapphire(gemMod);
                     answer *= -1;
                     vesselHold.sappCrate(answer);
                     return gemTotal;
                 default:
                     Console.WriteLine("Invalid Input");
-                    return input;
+                    return gemMod;
             }
         }
-        public double SupplyBuy(double input)
+        public double SupplyBuy(double supplyMod)
         {
             double supplyTotal;
-            Console.WriteLine("Which type of Metal: \n1 - Food\n2 - Water\n3 - Alcohol\n4 - Medicine");
+            Console.WriteLine("Which type of Supply: \n1 - Food\n2 - Water\n3 - Alcohol\n4 - Medicine");
+            string choice = Console.ReadLine();
+            switch (choice)
+            {
+                case "1":
+                    Console.WriteLine($"{vesselHold.foodCrate(0)} food crates\n How many do you wish to buy");
+                    int answer = int.Parse(Console.ReadLine());
+                    supplyTotal = supplyPrice.Food(supplyMod);
+                    supplyTotal *= answer;
+                    vesselHold.foodCrate(answer);
+                    return supplyTotal;
+                case "2":
+                    Console.WriteLine($"{vesselHold.waterCrate(0)} water crates\n How many do you wish to buy");
+                    answer = int.Parse(Console.ReadLine());
+                    supplyTotal = supplyPrice.Water(supplyMod);
+                    vesselHold.waterCrate(answer);
+                    return supplyTotal;
+                case "3":
+                    Console.WriteLine($"{vesselHold.alcoCrate(0)} alcohol crates\n How many do you wish to buy");
+                    answer = int.Parse(Console.ReadLine());
+                    supplyTotal = supplyPrice.Alcohol(supplyMod);
+                    vesselHold.alcoCrate(answer);
+                    return supplyTotal;
+                case "4":
+                    Console.WriteLine($"{vesselHold.mediCrate(0)} medicine crates\n How many do you wish to buy");
+                    answer = int.Parse(Console.ReadLine());
+                    supplyTotal = supplyPrice.Medicine(supplyMod);
+                    vesselHold.mediCrate(answer);
+                    return supplyTotal;
+                default:
+                    Console.WriteLine("Invalid Input");
+                    return supplyMod;
+            }
+        }
+        public double SupplySell(double supplyMod)
+        {
+            double supplyTotal;
+            Console.WriteLine("Which type of Supply: \n1 - Food\n2 - Water\n3 - Alcohol\n4 - Medicine");
             string choice = Console.ReadLine();
             switch (choice)
             {
                 case "1":
                     Console.WriteLine($"{vesselHold.foodCrate(0)} food crates\n How many do you wish to sell");
                     int answer = int.Parse(Console.ReadLine());
-                    supplyTotal = supplyPrice.Food(input);
+                    supplyTotal = supplyPrice.Food(supplyMod);
                     supplyTotal *= answer;
+                    answer *= -1;
                     vesselHold.foodCrate(answer);
                     return supplyTotal;
                 case "2":
                     Console.WriteLine($"{vesselHold.waterCrate(0)} water crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
-                    supplyTotal = supplyPrice.Water(input);
+                    supplyTotal = supplyPrice.Water(supplyMod);
+                    answer *= -1;
                     vesselHold.waterCrate(answer);
                     return supplyTotal;
                 case "3":
                     Console.WriteLine($"{vesselHold.alcoCrate(0)} alcohol crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
-                    supplyTotal = supplyPrice.Alcohol(input);
+                    supplyTotal = supplyPrice.Alcohol(supplyMod);
+                    answer *= -1;
                     vesselHold.alcoCrate(answer);
                     return supplyTotal;
                 case "4":
                     Console.WriteLine($"{vesselHold.mediCrate(0)} medicine crates\n How many do you wish to sell");
                     answer = int.Parse(Console.ReadLine());
-                    supplyTotal = supplyPrice.Medicine(input);
+                    supplyTotal = supplyPrice.Medicine(supplyMod);
+                    answer *= -1;
                     vesselHold.mediCrate(answer);
                     return supplyTotal;
                 default:
                     Console.WriteLine("Invalid Input");
-                    return input;
+                    return supplyMod;
             }
         }
-        public double SupplySell(double input)
+
+        // need to fill this method
+        public double marketWallet(double price)
         {
-            double supplyTotal;
-            Console.WriteLine("Which type of Metal: \n1 - Food\n2 - Water\n3 - Alcohol\n4 - Medicine");
-            string choice = Console.ReadLine();
-            switch (choice)
-            {
-                case "1":
-                    Console.WriteLine($"{vesselHold.foodCrate(0)} food crates\n How many do you wish to sell");
-                    int answer = int.Parse(Console.ReadLine());
-                    supplyTotal = supplyPrice.Food(input);
-                    supplyTotal *= answer;
-                    answer *= -1;
-                    vesselHold.foodCrate(answer);
-                    return supplyTotal;
-                case "2":
-                    Console.WriteLine($"{vesselHold.waterCrate(0)} water crates\n How many do you wish to sell");
-                    answer = int.Parse(Console.ReadLine());
-                    supplyTotal = supplyPrice.Water(input);
-                    answer *= -1;
-                    vesselHold.waterCrate(answer);
-                    return supplyTotal;
-                case "3":
-                    Console.WriteLine($"{vesselHold.alcoCrate(0)} alcohol crates\n How many do you wish to sell");
-                    answer = int.Parse(Console.ReadLine());
-                    supplyTotal = supplyPrice.Alcohol(input);
-                    answer *= -1;
-                    vesselHold.alcoCrate(answer);
-                    return supplyTotal;
-                case "4":
-                    Console.WriteLine($"{vesselHold.mediCrate(0)} medicine crates\n How many do you wish to sell");
-                    answer = int.Parse(Console.ReadLine());
-                    supplyTotal = supplyPrice.Medicine(input);
-                    answer *= -1;
-                    vesselHold.mediCrate(answer);
-                    return supplyTotal;
-                default:
-                    Console.WriteLine("Invalid Input");
-                    return input;
-            }
+            double walletAmount = vesselHold.playerWallet(price); // needs an actual value
+            Console.WriteLine(walletAmount);
+            return walletAmount;
         }
     }
 }

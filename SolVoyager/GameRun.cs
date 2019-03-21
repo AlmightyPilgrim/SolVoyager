@@ -32,9 +32,126 @@ namespace SolVoyager
             playerTrader.Gender();
             playerTrader.Name();
             Console.WriteLine("Which planet do you wish to start on?\nEarth\tTau Ceti\nMining Colony\tAlpha Centari");
+            location = Console.ReadLine();
+            switch (location)
+            {
+                case "Earth":
+                    planetEarth.earthDisplay();
+                    break;
+                case "Tau Ceti":
+                    planetCeti.tauDisplay();
+                    break;
+                case "Mining Colony":
+                    planetColony.colonyDisplay();
+                    break;
+                case "Alpha Centari":
+                    planetCentari.alphaDisplay();
+                    break;
+                default:
+                    Console.WriteLine("Invalid Entry");
+                    // terminate program
+                    break;
+            }
             // begin journey on Earth
             while (check == true)
             {
+                Console.Clear();
+                Console.Write("Travel to new location:");
+                switch (location)
+                {
+                    case "Earth":
+                        Console.WriteLine("Select new planet\nTau Ceti (11.89 light years)\n" +
+                            "Mining Colony (7.65 light years)\nAlpha Centari (4.3 light years)");
+                        location = Console.ReadLine();
+                        switch (location)
+                        {
+                            case "Tau Ceti":
+                                travelTime.EarthtoTauCeti();
+                                playerTrader.CharacterAge(travelTime.EarthtoTauCeti());
+                                
+                                break;
+                            case "Mining Colony":
+                                travelTime.EarthtoColony();
+                                playerTrader.CharacterAge(travelTime.EarthtoColony());
+
+                                break;
+                            case "Alpha Centari":
+                                travelTime.EarthtoCentari();
+                                playerTrader.CharacterAge(travelTime.EarthtoCentari());
+
+                                break;
+                        }
+                        break;
+                    case "Tau Ceti":
+                        Console.WriteLine("Select new planet\nEarth\n" +
+                                "Mining Colony\nAlpha Centari");
+                        location = Console.ReadLine();
+                        switch (location)
+                        {
+                            case "Earth":
+                                travelTime.EarthtoTauCeti();
+                                playerTrader.CharacterAge(travelTime.EarthtoTauCeti());
+
+                                break;
+                            case "Mining Colony":
+                                travelTime.EarthtoColony();
+                                playerTrader.CharacterAge(travelTime.EarthtoColony());
+
+                                break;
+                            case "Alpha Centari":
+                                travelTime.EarthtoCentari();
+                                playerTrader.CharacterAge(travelTime.EarthtoCentari());
+
+                                break;
+                        }
+                        break;
+                    case "Mining Colony":
+                        Console.WriteLine("Select new planet\nTau Ceti\n" +
+                                "Earth\nAlpha Centari");
+                        location = Console.ReadLine();
+                        switch (location)
+                        {
+                            case "Tau Ceti":
+                                travelTime.EarthtoTauCeti();
+                                playerTrader.CharacterAge(travelTime.EarthtoTauCeti());
+
+                                break;
+                            case "Earth":
+                                travelTime.EarthtoColony();
+                                playerTrader.CharacterAge(travelTime.EarthtoColony());
+
+                                break;
+                            case "Alpha Centari":
+                                travelTime.EarthtoCentari();
+                                playerTrader.CharacterAge(travelTime.EarthtoCentari());
+
+                                break;
+                        }
+                        break;
+                    case "Alpha Centari":
+                        Console.WriteLine("Select new planet\nTau Ceti\n" +
+                                "Mining Colony\nEarth");
+                        location = Console.ReadLine();
+                        switch (location)
+                        {
+                            case "Tau Ceti":
+                                travelTime.EarthtoTauCeti();
+                                playerTrader.CharacterAge(travelTime.EarthtoTauCeti());
+
+                                break;
+                            case "Mining Colony":
+                                travelTime.EarthtoColony();
+                                playerTrader.CharacterAge(travelTime.EarthtoColony());
+
+                                break;
+                            case "Earth":
+                                travelTime.EarthtoCentari();
+                                playerTrader.CharacterAge(travelTime.EarthtoCentari());
+
+                                break;
+                        }
+                        break;
+                }
                 switch (location)
                 {
                     case "Earth":
@@ -50,6 +167,7 @@ namespace SolVoyager
                         planetCentari.alphaDisplay();
                         break;                    
                 }
+
 
             }
         }

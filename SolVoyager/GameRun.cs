@@ -21,7 +21,11 @@ namespace SolVoyager
 
         public void Run()
         {
-            
+            // Opening page, with quit or start game option
+            // Run Character Creation
+            // Into buying your first resource to trade to another system
+            // display the base prices for resources
+            // slowly increase payloads with longer play, forced to start with 1 maybe 2 crates
         }
     }
 }

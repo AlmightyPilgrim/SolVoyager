@@ -230,7 +230,7 @@ namespace Vessel
             int warp = 5;
             double z = 10 - warp;
             double velocity = (Math.Pow(warp, x)) + (Math.Pow(z, y));
-            Console.WriteLine($"Warp speed is {velocity}");
+            Console.WriteLine($"Warp speed is {velocity}");  // distance / velocity gives age
             return velocity;
         }
 

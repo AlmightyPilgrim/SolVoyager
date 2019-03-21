@@ -4,13 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Resources;
+using Vessel;
 
 namespace Planets
-{
+{ // Earth is the baseline class for each of the planets, as everything that happens in it, will be takn and applied to other planet classes.
     public class Earth
     {
         Market earthMarket = new Market();
         EarthResources showResources = new EarthResources();
+        Ship locationHelp = new Ship();
+
         public void earthDisplay()
         {
             bool check = true;
@@ -49,5 +52,10 @@ namespace Planets
             Console.Clear();
         }
 
+        public double EarthLocation()
+        {
+            
+            return;
+        }
     }
 }

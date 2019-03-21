@@ -17,6 +17,10 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
+            Ship testShip = new Ship();
+            testShip.WarpEquation();
+
+
             Earth testEarth = new Earth();
             testEarth.earthDisplay();
 

@@ -47,5 +47,11 @@ namespace Planets
             }
             Console.Clear();
         }
+
+        public double EarthLocation()
+        {
+
+            return;
+        }
     }
 }

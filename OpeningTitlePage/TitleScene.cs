@@ -8,27 +8,20 @@ namespace OpeningTitlePage
 {
     public class Title
     {
-        void CenteredString(string s)
+       public void CenteredString()
         {
-            s = "00000  000000  0"+
-               " 0     0    0   0"+
-               " 00000 0    0  0"+
-               "     0 0    0  0"+
-               "00000  000000  000000"+
+           string s = "00000  000000  0"+
+                     " 0     0    0   0"+
+                     " 00000 0    0  0"+
+                     "     0 0    0  0"+
+                     "00000  000000  000000"+
                  "0   0 00000 0   0  0    00000  00000  00000"+
                  "0   0 0   0 0   0 0  0  0      0      0    0"+
                  "0   0 0   0   0  000000 0  000 00000  00000"+
                   "0 0  0   0   0  0    0 0    0 0      0    0"+
                    "0   00000   0  0    0 000000 00000  0     0";
-            if (s.Length <= Console.WindowWidth)
-            {
-                Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
-                Console.WriteLine(s);
-            }
-            else
-            {
-                throw new Exception("Oversided String");
-            }
+            Console.WriteLine(s);
+          
         }
 
 
@@ -36,7 +29,16 @@ namespace OpeningTitlePage
 }
 
 
+  //if (s.Length <= Console.WindowWidth)
+  //          {
+  //              Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
+  //              Console.WriteLine(s);
+  //          }
 
+  //          else
+  //          {
+  //              throw new Exception();
+  //          }
 
 
 //public void Opener()

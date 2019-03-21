@@ -48,10 +48,10 @@ namespace Planets
             Console.Clear();
         }
 
-        public double EarthLocation()
+        public double ColonyLocation()
         {
-
-            return 1;
+            double location = 7.65;
+            return location;
         }
     }
 }

@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vessel;
 
 namespace CharacterDesign
 {
-    public class Character
+    public class Character  // character's wallet is connected with the ship so is in the ship class
     {
+        Ship warpAge = new Ship();
+        string characterStart = "Earth";
+        double age = Math.Round(20.00, 2);
+
         public string Gender(string x)
         {
             bool check = false;
@@ -290,9 +295,16 @@ namespace CharacterDesign
         {
         }
 
-        public void CharacterAge()
+        public string CharacterLocation(string input)
         {
-            
+            characterStart = input;
+            return characterStart;
+        }
+
+        public double CharacterAge(double distance)
+        {
+            age += (distance / warpAge.WarpEquation());
+            return age;
         }
     }
 }

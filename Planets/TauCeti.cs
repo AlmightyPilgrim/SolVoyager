@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace Planets
 {
-    class Mars
+    class TauCeti
     {
-        Market marsMarket = new Market();
-        MarsResources showResources = new MarsResources();
-        public void marsDisplay()
+        Market tauMarket = new Market();
+        TauCetiResources showResources = new TauCetiResources();
+        public void tauDisplay()
         {
             bool check = true;
-            Console.WriteLine("Welcome to Mars.");
+            Console.WriteLine("Welcome to Tau Ceti.");
             Console.WriteLine("Do you wish to view the market [1], or buy and sell [2]?");
             string answer = Console.ReadLine();
             while (check == true)
             {
                 if (answer == "1")
                 {
-                    marsMarket.MarketDisplay("Mars");
+                    tauMarket.MarketDisplay("Tau Ceti");
                 }
                 else if (answer == "2")
                 {
-                    showResources.MarsMetals();
-                    showResources.MarsFabric();
-                    showResources.MarsGemstone();
-                    showResources.MarsSupply();
+                    showResources.TauMetals();
+                    showResources.TauFabric();
+                    showResources.TauGemstone();
+                    showResources.TauSupply();
                 }
                 else
                 {
@@ -48,10 +48,10 @@ namespace Planets
             Console.Clear();
         }
 
-        public double EarthLocation()
+        public double TauCetiLocation()
         {
-
-            return 1;
+            double location = 11.89;
+            return location;
         }
     }
 }

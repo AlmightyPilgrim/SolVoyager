@@ -54,8 +54,8 @@ namespace Planets
 
         public double EarthLocation()
         {
-            
-            return 1;
+            double location = 0;
+            return location;
         }
     }
 }

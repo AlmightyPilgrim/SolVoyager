@@ -48,10 +48,10 @@ namespace Planets
             Console.Clear();
         }
 
-        public double EarthLocation()
+        public double AlphaLocation()
         {
-
-            return 1;
+            double location = 4.3;
+            return location;
         }
     }
 }

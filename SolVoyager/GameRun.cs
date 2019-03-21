@@ -27,7 +27,7 @@ namespace SolVoyager
             // display the base prices for resources
             // slowly increase payloads with longer play, forced to start with 1 maybe 2 crates
             playerTrader.Gender();
-
+            playerTrader.Name();
         }
     }
 }

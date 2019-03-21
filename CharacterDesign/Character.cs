@@ -15,6 +15,7 @@ namespace CharacterDesign
 
         public void Gender()
         {
+            string done = "done";
             bool check = false;
             while (check == false)
             {
@@ -24,14 +25,16 @@ namespace CharacterDesign
                 {
                     case "1":
                         Console.WriteLine("You are a Male, congratulations on being generic.");
+                        BackgroundMale();
                         check = true;
                         break;
                     case "2":
-                        Console.WriteLine("You are a Female\n If you are a male IRL, you sir are weird");
+                        Console.WriteLine("You are a Female, yay diversity");
+                        BackgroundFemale();
                         check = true;
                         break;
                     case "Q":
-                        Console.WriteLine("So I guess you didnt wanna play eh?");
+                        Console.WriteLine("So I guess you didnt wanna play eh?, well thats too bad.");
                         check = true;
                         break;
                     default:
@@ -39,10 +42,10 @@ namespace CharacterDesign
                         check = false;
                         break;
                 }
-            }   
+            }
         }
 
-        public string Name(string name)
+        public string Name()
         {
             Console.WriteLine("Enter your characters name");
             name = Console.ReadLine();

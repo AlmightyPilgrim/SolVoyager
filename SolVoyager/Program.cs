@@ -17,6 +17,8 @@ namespace SolVoyager
     {
         static void Main(string[] args)
         {
+            Title testTitle = new Title();
+            testTitle.CenteredString();
             Ship testShip = new Ship();
             testShip.WarpEquation();
 

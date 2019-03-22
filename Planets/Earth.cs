@@ -38,7 +38,7 @@ namespace Planets
                     Console.WriteLine("Invalid Input, try again");
                 }
                 
-                Console.WriteLine("Do you wish to view market now [1], or leave planet [2]?");
+                Console.WriteLine("Do you wish to buy or sell now [1], or leave planet [2]?");
                 answer = Console.ReadLine();
                 if (answer == "1")
                 {

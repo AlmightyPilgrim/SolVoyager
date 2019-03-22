@@ -24,6 +24,7 @@ namespace SolVoyager
         {
             string location = "Earth";
             bool check = true;
+            playerShip.playerWallet(10000);
             // Opening page, with quit or start game option
             // Run Character Creation
             // Into buying your first resource to trade to another system
@@ -31,6 +32,7 @@ namespace SolVoyager
             // slowly increase payloads with longer play, forced to start with 1 maybe 2 crates
             playerTrader.Gender();
             playerTrader.Name();
+            Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
             Console.WriteLine("Which planet do you wish to start on?\nEarth\tTau Ceti\nMining Colony\tAlpha Centari");
             location = Console.ReadLine();
             switch (location)
@@ -68,17 +70,17 @@ namespace SolVoyager
                             case "Tau Ceti":
                                 travelTime.EarthtoTauCeti();
                                 playerTrader.CharacterAge(travelTime.EarthtoTauCeti());
-                                
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                             case "Mining Colony":
                                 travelTime.EarthtoColony();
                                 playerTrader.CharacterAge(travelTime.EarthtoColony());
-
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                             case "Alpha Centari":
                                 travelTime.EarthtoCentari();
                                 playerTrader.CharacterAge(travelTime.EarthtoCentari());
-
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                         }
                         break;
@@ -91,17 +93,17 @@ namespace SolVoyager
                             case "Earth":
                                 travelTime.EarthtoTauCeti();
                                 playerTrader.CharacterAge(travelTime.EarthtoTauCeti());
-
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                             case "Mining Colony":
                                 travelTime.EarthtoColony();
                                 playerTrader.CharacterAge(travelTime.EarthtoColony());
-
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                             case "Alpha Centari":
                                 travelTime.EarthtoCentari();
                                 playerTrader.CharacterAge(travelTime.EarthtoCentari());
-
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                         }
                         break;
@@ -114,17 +116,17 @@ namespace SolVoyager
                             case "Tau Ceti":
                                 travelTime.EarthtoTauCeti();
                                 playerTrader.CharacterAge(travelTime.EarthtoTauCeti());
-
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                             case "Earth":
                                 travelTime.EarthtoColony();
                                 playerTrader.CharacterAge(travelTime.EarthtoColony());
-
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                             case "Alpha Centari":
                                 travelTime.EarthtoCentari();
                                 playerTrader.CharacterAge(travelTime.EarthtoCentari());
-
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                         }
                         break;
@@ -137,17 +139,17 @@ namespace SolVoyager
                             case "Tau Ceti":
                                 travelTime.EarthtoTauCeti();
                                 playerTrader.CharacterAge(travelTime.EarthtoTauCeti());
-
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                             case "Mining Colony":
                                 travelTime.EarthtoColony();
                                 playerTrader.CharacterAge(travelTime.EarthtoColony());
-
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                             case "Earth":
                                 travelTime.EarthtoCentari();
                                 playerTrader.CharacterAge(travelTime.EarthtoCentari());
-
+                                Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                         }
                         break;

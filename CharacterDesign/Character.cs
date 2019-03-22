@@ -25,15 +25,18 @@ namespace CharacterDesign
                     case "1":
                         Console.WriteLine("You are a Male, congratulations on being generic.");
                         BackgroundMale();
+                        warpAge.playerWallet(10000);
                         check = true;
                         break;
                     case "2":
                         Console.WriteLine("You are a Female, yay diversity");
                         BackgroundFemale();
+                        warpAge.playerWallet(10000);
                         check = true;
                         break;
                     case "Q":
                         Console.WriteLine("So I guess you didnt wanna play eh?, well thats too bad.");
+                        warpAge.playerWallet(10000);
                         check = true;
                         break;
                     default:
@@ -245,7 +248,7 @@ namespace CharacterDesign
         public double CharacterAge(double distance)
         {
             age += (distance / warpAge.WarpEquation());
-            return age;
+            return Math.Round(age, 2);
         }
     }
 }

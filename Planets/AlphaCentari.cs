@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vessel;
 
 namespace Planets
 {
@@ -10,7 +11,7 @@ namespace Planets
     {
         Market centariMarket = new Market();
         AlphaCentariResources showResources = new AlphaCentariResources();
-        public void alphaDisplay()
+        public void alphaDisplay(Ship playerShip)
         {
             bool check = true;
             Console.WriteLine("Welcome to Alpha Centari.");
@@ -20,7 +21,7 @@ namespace Planets
             {
                 if (answer == "1")
                 {
-                    centariMarket.MarketDisplay("Alpha");
+                    centariMarket.MarketDisplay("Alpha", playerShip);
                 }
                 else if (answer == "2")
                 {

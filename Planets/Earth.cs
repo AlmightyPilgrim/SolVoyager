@@ -12,9 +12,8 @@ namespace Planets
     {
         Market earthMarket = new Market();
         EarthResources showResources = new EarthResources();
-        Ship locationHelp = new Ship();
 
-        public void earthDisplay()
+        public void earthDisplay(Ship playerShip)
         {
             bool check = true;
             Console.WriteLine("Welcome to Earth.");
@@ -24,7 +23,7 @@ namespace Planets
             {
                 if (answer == "1")
                 {
-                    earthMarket.MarketDisplay("Earth");
+                    earthMarket.MarketDisplay("Earth", playerShip);
                 }
                 else if (answer == "2")
                 {

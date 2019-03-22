@@ -14,12 +14,14 @@ namespace Planets
         Fabric fabricPrice = new Fabric();
         Gemstones gemstonePrice = new Gemstones();
         Supplies supplyPrice = new Supplies();
-        Ship vesselHold = new Ship();
+        Ship vesselHold;
 
         // include loops in the display incase of trying to view multiple types as well
         // also making it so they dont go to ship and back to planet
-        public string MarketDisplay(string world)
+        public string MarketDisplay(string world, Ship playerShip)
         {
+            vesselHold = playerShip;
+
             bool check = true;
             int metal = 0;
             double fabric = 0;
@@ -53,7 +55,7 @@ namespace Planets
                 gem = 9;
                 supply = 3;
             }
-            Console.WriteLine(vesselHold.playerWallet(10000));
+            Console.WriteLine(vesselHold.playerWallet(0));
             while (check == true)
             {
                 Console.WriteLine("Which resource would you like to view? \n1 - Metals\t 2 - Fabrics\n3 - Gemstone\t 4 - Supplies");

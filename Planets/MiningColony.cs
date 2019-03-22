@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vessel;
 
 namespace Planets
 {
@@ -10,7 +11,7 @@ namespace Planets
     {
         Market colonyMarket = new Market();
         MiningColonyResources showResources = new MiningColonyResources();
-        public void colonyDisplay()
+        public void colonyDisplay(Ship playerShip)
         {
             bool check = true;
             Console.WriteLine("Welcome to the Mining Colony.");
@@ -20,7 +21,7 @@ namespace Planets
             {
                 if (answer == "1")
                 {
-                    colonyMarket.MarketDisplay("Colony");
+                    colonyMarket.MarketDisplay("Colony", playerShip);
                 }
                 else if (answer == "2")
                 {

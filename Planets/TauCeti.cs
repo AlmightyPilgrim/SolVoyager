@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vessel;
 
 namespace Planets
 {
@@ -10,7 +11,8 @@ namespace Planets
     {
         Market tauMarket = new Market();
         TauCetiResources showResources = new TauCetiResources();
-        public void tauDisplay()
+
+        public void tauDisplay(Ship playerShip)
         {
             bool check = true;
             Console.WriteLine("Welcome to Tau Ceti.");
@@ -20,7 +22,7 @@ namespace Planets
             {
                 if (answer == "1")
                 {
-                    tauMarket.MarketDisplay("Tau Ceti");
+                    tauMarket.MarketDisplay("Tau Ceti", playerShip);
                 }
                 else if (answer == "2")
                 {

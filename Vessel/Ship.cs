@@ -11,7 +11,7 @@ namespace Vessel
     public class Ship
     {
         Creds crateTrack = new Creds();
-        // int platstore = 0;
+        int platstore = 0;
         int palladstore = 0;
         int titanstore = 0;
         int silkstore = 0;
@@ -24,7 +24,7 @@ namespace Vessel
         int waterstore = 0;
         int alcostore = 0;
         int medistore = 0;
-        // double wallet = 10000;
+        double wallet = 10000;
 
         public int Capacity(int input)  // tracking number of crates, and limiting amount allowed
         {
@@ -67,15 +67,14 @@ namespace Vessel
 
         public int platCrate(int input)
         {
-            int platstore = 0 + input;
+            platstore += input;
             return platstore;
         }
 
         public int palladCrate(int input)
         {
             palladstore += input;
-            int testvalue = palladstore + input;
-            return testvalue;
+            return palladstore;
         }
 
         public int titanCrate(int input)
@@ -214,7 +213,7 @@ namespace Vessel
         // the players wallet
         public double playerWallet(double input)
         {
-            double wallet = 0 + input;
+            wallet = 0 + input;
             wallet = Math.Round(wallet, 2);
             if (wallet < 0)
             {

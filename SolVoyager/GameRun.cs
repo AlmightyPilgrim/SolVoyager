@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Planets;
 using Vessel;
 using CharacterDesign;
+using OpeningTitlePage;
 
 
 namespace SolVoyager
@@ -19,11 +20,14 @@ namespace SolVoyager
         TauCeti planetCeti = new TauCeti();
         PlanetDistance travelTime = new PlanetDistance();
         Ship playerShip = new Ship();
+        Title openTitle = new Title();
+
         // variables for the vessel hold storage
         public void Run()
         {
             string location = "Earth";
             bool check = true;
+            openTitle.CenteredString();
             playerShip.playerWallet(10000);
             // Opening page, with quit or start game option
             // Run Character Creation
@@ -38,16 +42,16 @@ namespace SolVoyager
             switch (location)
             {
                 case "Earth":
-                    planetEarth.earthDisplay();
+                    planetEarth.earthDisplay(playerShip);
                     break;
                 case "Tau Ceti":
-                    planetCeti.tauDisplay();
+                    planetCeti.tauDisplay(playerShip);
                     break;
                 case "Mining Colony":
-                    planetColony.colonyDisplay();
+                    planetColony.colonyDisplay(playerShip);
                     break;
                 case "Alpha Centari":
-                    planetCentari.alphaDisplay();
+                    planetCentari.alphaDisplay(playerShip);
                     break;
                 default:
                     Console.WriteLine("Invalid Entry");
@@ -157,16 +161,16 @@ namespace SolVoyager
                 switch (location)
                 {
                     case "Earth":
-                        planetEarth.earthDisplay();
+                        planetEarth.earthDisplay(playerShip);
                         break;
                     case "Tau Ceti":
-                        planetCeti.tauDisplay();
+                        planetCeti.tauDisplay(playerShip);
                         break;
                     case "Mining Colony":
-                        planetColony.colonyDisplay();
+                        planetColony.colonyDisplay(playerShip);
                         break;
                     case "Alpha Centari":
-                        planetCentari.alphaDisplay();
+                        planetCentari.alphaDisplay(playerShip);
                         break;                    
                 }
 

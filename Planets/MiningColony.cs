@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vessel;
 
 namespace Planets
 {
@@ -10,17 +11,17 @@ namespace Planets
     {
         Market colonyMarket = new Market();
         MiningColonyResources showResources = new MiningColonyResources();
-        public void colonyDisplay()
+        public void colonyDisplay(Ship playerShip)
         {
             bool check = true;
             Console.WriteLine("Welcome to the Mining Colony.");
-            Console.WriteLine("Do you wish to view the market [1], or buy and sell [2]?");
+            Console.WriteLine("Do you wish to buy and sell [1], or view the market [2]?");
             string answer = Console.ReadLine();
             while (check == true)
             {
                 if (answer == "1")
                 {
-                    colonyMarket.MarketDisplay("Colony");
+                    colonyMarket.MarketDisplay("Colony", playerShip);
                 }
                 else if (answer == "2")
                 {
@@ -34,7 +35,7 @@ namespace Planets
                     Console.WriteLine("Invalid Input, try again");
                 }
 
-                Console.WriteLine("Do you wish to view market now [1], or leave planet [2]?");
+                Console.WriteLine("Do you wish to buy or sell now [1], or leave planet [2]?");
                 answer = Console.ReadLine();
                 if (answer == "1")
                 {

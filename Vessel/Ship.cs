@@ -7,7 +7,7 @@ using Resources;
 using Currency;
 
 namespace Vessel
-{
+{ 
     public class Ship
     {
         Creds crateTrack = new Creds();
@@ -24,7 +24,7 @@ namespace Vessel
         int waterstore = 0;
         int alcostore = 0;
         int medistore = 0;
-        double wallet = 10000;
+        double wallet = 500;
 
         public int Capacity(int input)  // tracking number of crates, and limiting amount allowed
         {
@@ -214,7 +214,7 @@ namespace Vessel
         public double playerWallet(double input)
         {
             wallet += input;
-            wallet = Math.Round(wallet);
+            wallet = Math.Round(wallet, 2);
             if (wallet < 0)
             {
                 Console.Clear();
@@ -233,6 +233,5 @@ namespace Vessel
             // distance / velocity gives age
             return velocity;
         }
-
     }
 }

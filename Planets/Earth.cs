@@ -12,19 +12,18 @@ namespace Planets
     {
         Market earthMarket = new Market();
         EarthResources showResources = new EarthResources();
-        Ship locationHelp = new Ship();
 
-        public void earthDisplay()
+        public void earthDisplay(Ship playerShip)
         {
             bool check = true;
             Console.WriteLine("Welcome to Earth.");
-            Console.WriteLine("Do you wish to view the market [1], or buy and sell [2]?");
+            Console.WriteLine("Do you wish to buy and sell [1], or view the market [2]?");
             string answer = Console.ReadLine();
             while (check == true)
             {
                 if (answer == "1")
                 {
-                    earthMarket.MarketDisplay("Earth");
+                    earthMarket.MarketDisplay("Earth", playerShip);
                 }
                 else if (answer == "2")
                 {
@@ -38,7 +37,7 @@ namespace Planets
                     Console.WriteLine("Invalid Input, try again");
                 }
                 
-                Console.WriteLine("Do you wish to view market now [1], or leave planet [2]?");
+                Console.WriteLine("Do you wish to buy or sell now [1], or leave planet [2]?");
                 answer = Console.ReadLine();
                 if (answer == "1")
                 {

@@ -74,7 +74,7 @@ namespace Vessel
         public int palladCrate(int input)
         {
             palladstore += input;
-            int testvalue = palladstore += input;
+            int testvalue = palladstore + input;
             return testvalue;
         }
 

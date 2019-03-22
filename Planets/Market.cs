@@ -53,7 +53,7 @@ namespace Planets
                 gem = 9;
                 supply = 3;
             }
-            Console.WriteLine(vesselHold.playerWallet(0));
+            Console.WriteLine(vesselHold.playerWallet(10000));
             while (check == true)
             {
                 Console.WriteLine("Which resource would you like to view? \n1 - Metals\t 2 - Fabrics\n3 - Gemstone\t 4 - Supplies");

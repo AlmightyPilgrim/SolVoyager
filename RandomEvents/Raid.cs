@@ -13,6 +13,10 @@ namespace RandomEvents
     {
         public string RandomEvents()
         {
+            //Random event generator that chooses event and returns result
+
+            do
+            { 
             Random rnd = new Random();
             Console.WriteLine("You are traveling");
 
@@ -26,10 +30,21 @@ namespace RandomEvents
 
             Console.WriteLine(events[rnd.Next(0, events.Length)]);
             var result = Console.ReadLine();
-            return result;
-            
+
+                if (result == [0])
+                {
+
+                }
+                return result;
+
+                
+            }
+
+        
+
            
            
+   
 
             
         }

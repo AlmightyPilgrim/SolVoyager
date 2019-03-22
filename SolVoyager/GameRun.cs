@@ -28,7 +28,6 @@ namespace SolVoyager
             string location = "Earth";
             bool check = true;
             openTitle.CenteredString();
-            playerShip.playerWallet(10000);
             // Opening page, with quit or start game option
             // Run Character Creation
             // Into buying your first resource to trade to another system
@@ -36,21 +35,24 @@ namespace SolVoyager
             // slowly increase payloads with longer play, forced to start with 1 maybe 2 crates
             playerTrader.Gender();
             playerTrader.Name();
-            Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
+            Console.WriteLine($"{playerTrader.CharacterAge(0)} years old, and only have a ship and 500 credits to your name.");
             Console.WriteLine("Which planet do you wish to start on?\nEarth\tTau Ceti\nMining Colony\tAlpha Centari");
             location = Console.ReadLine();
             switch (location)
             {
                 case "Earth":
+                    playerShip.playerWallet(0);
                     planetEarth.earthDisplay(playerShip);
                     break;
                 case "Tau Ceti":
+                    playerShip.playerWallet(0);
                     planetCeti.tauDisplay(playerShip);
                     break;
                 case "Mining Colony":
                     planetColony.colonyDisplay(playerShip);
                     break;
                 case "Alpha Centari":
+                    playerShip.playerWallet(0);
                     planetCentari.alphaDisplay(playerShip);
                     break;
                 default:

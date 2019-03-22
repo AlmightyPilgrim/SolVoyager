@@ -24,7 +24,7 @@ namespace Vessel
         int waterstore = 0;
         int alcostore = 0;
         int medistore = 0;
-        double wallet = 10000;
+        double wallet = 500;
 
         public int Capacity(int input)  // tracking number of crates, and limiting amount allowed
         {
@@ -213,7 +213,7 @@ namespace Vessel
         // the players wallet
         public double playerWallet(double input)
         {
-            wallet = 0 + input;
+            wallet += input;
             wallet = Math.Round(wallet, 2);
             if (wallet < 0)
             {

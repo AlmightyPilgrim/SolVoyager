@@ -7,6 +7,7 @@ using Planets;
 using Vessel;
 using CharacterDesign;
 using OpeningTitlePage;
+using Figgle;
 
 
 namespace SolVoyager

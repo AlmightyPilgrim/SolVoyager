@@ -15,8 +15,6 @@ namespace OpeningTitlePage
             Console.WriteLine(FiggleFonts.Graffiti.Render("Sol Voyager"));
           
         }
-
-
     }
 }
 
@@ -32,35 +30,3 @@ namespace OpeningTitlePage
 //              throw new Exception();
 //          }
 
-
-//public void Opener()
-//{
-//    bool check = false;
-//    do
-//    {
-//        Console.WriteLine("00000  000000  0",
-//                         " 0     0    0   0",
-//                         " 00000 0    0  0",
-//                         "     0 0    0  0",
-//                         "00000  000000  000000",
-//                          "0   0 00000 0   0  0    00000  00000  00000",
-//                          "0   0 0   0 0   0 0  0  0      0      0    0",
-//                          "0   0 0   0   0  000000 0  000 00000  00000",
-//                           "0 0  0   0   0  0    0 0    0 0      0    0",
-//                            "0   00000   0  0    0 000000 00000  0     0");
-//        Console.WriteLine("Press Enter to continue...");
-//        var x = Console.ReadLine();
-
-//        if (x == "Enter")
-//        {
-//            check = true;
-//        }
-
-//    } while (check == false);
-//}
-
-
-
-    
-
- 

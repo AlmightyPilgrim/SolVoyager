@@ -157,7 +157,7 @@ namespace CharacterDesign
                 Console.WriteLine(" Character Origins");
                 Console.WriteLine("\n------------------");
 
-                Console.WriteLine("1.  | 2.  | 3. ");
+                Console.WriteLine("1. Small Town Girl | 2. Rich Girl | 3. The Mathematician");
 
                 var select = Console.ReadLine();
 
@@ -216,7 +216,10 @@ namespace CharacterDesign
                 {
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("story");
+                    Console.WriteLine("You are a shy introvert who has a neck for all things dealing with numbers.  " +
+                        "Your ability to learn things quickly has allowed you to acquire a vast wealth by the age of 25." +
+                        "  You now look to making even more money wheeling and dealing in space.  Do you have what it takes" +
+                        " to become one of the greatest merchants of all time?  Go forth and build your own empire amongst the stars.");
                     Console.ResetColor();
                     Console.WriteLine("\nB: Back | Enter: Select Character");
                     var selectCharacter = Console.ReadLine();

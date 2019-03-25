@@ -61,7 +61,7 @@ namespace SolVoyager
                     // terminate program
                     break;
             }
-            // problem with the inventory system, not maintaining the inventory when moving to a new planet
+            
             while (check == true)
             {
                 Console.Clear();

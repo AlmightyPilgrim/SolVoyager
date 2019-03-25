@@ -8,6 +8,7 @@ using Vessel;
 using CharacterDesign;
 using OpeningTitlePage;
 using Figgle;
+using RandomEvents;
 
 
 namespace SolVoyager
@@ -22,6 +23,7 @@ namespace SolVoyager
         PlanetDistance travelTime = new PlanetDistance();
         Ship playerShip = new Ship();
         Title openTitle = new Title();
+        Events randomEvent = new Events();
 
         // variables for the vessel hold storage
         public void Run()
@@ -77,16 +79,19 @@ namespace SolVoyager
                             case "Tau Ceti":
                                 travelTime.EarthtoTauCeti();
                                 playerTrader.CharacterAge(travelTime.EarthtoTauCeti());
+                                randomEvent.RandomEvents(1, playerShip);
                                 Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                             case "Mining Colony":
                                 travelTime.EarthtoColony();
                                 playerTrader.CharacterAge(travelTime.EarthtoColony());
+                                randomEvent.RandomEvents(1, playerShip);
                                 Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                             case "Alpha Centari":
                                 travelTime.EarthtoCentari();
                                 playerTrader.CharacterAge(travelTime.EarthtoCentari());
+                                randomEvent.RandomEvents(1, playerShip);
                                 Console.WriteLine($"{playerTrader.CharacterAge(0)} years old");
                                 break;
                         }

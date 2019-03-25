@@ -62,6 +62,10 @@
       <Project>{ba3cd0f9-5ef4-4b54-9ff9-5131a3928013}</Project>
       <Name>Currency</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RandomEvents\RandomEvents.csproj">
+      <Project>{e4212367-ee29-4f7c-b388-4ac6ef023f50}</Project>
+      <Name>RandomEvents</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Resources\Resources.csproj">
       <Project>{6a6d25c0-c839-45d8-ac5b-0b255fab6b9a}</Project>
       <Name>Resources</Name>

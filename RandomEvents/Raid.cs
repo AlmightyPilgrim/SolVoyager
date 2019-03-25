@@ -13,7 +13,7 @@ namespace RandomEvents
     public class Events
     {
         Ship vesselhold;
-        public string RandomEvents(Ship playerShip)
+        public double RandomEvents(int y, Ship playerShip)  // x and y are just holder type values to make code work
         {
             //Random event generator that chooses event and returns result
             vesselhold = playerShip;
@@ -44,52 +44,69 @@ namespace RandomEvents
             if (result.Contains(repair1))
             {
                 //-250 creds to wallet
-                vesselhold.playerWallet(-250);
+                Console.WriteLine($"{repair1}");
+                double x = vesselhold.playerWallet(-250);
+                return x;
             }
 
             else if (result.Contains(repair2))
             {
                 //-250 creds to wallet
-                vesselhold.playerWallet(-250);
+                Console.WriteLine($"{repair2}");
+                double x = vesselhold.playerWallet(-250);
+                return x;
             }
             else if (result.Contains(repair3))
             {
                 //-500 creds to wallet
-                vesselhold.playerWallet(-500);
+                Console.WriteLine($"{repair3}");
+                double x = vesselhold.playerWallet(-500);
+                return x;
             }
             else if (result.Contains(repair4))
             {
                 //-300 creds wallet
-                vesselhold.playerWallet(-300);
+                Console.WriteLine($"{repair4}");
+                double x = vesselhold.playerWallet(-300);
+                return x;
             }
 
             else if (result.Contains(goodsTaken))
             {
                 // half goods taken
-                vesselhold.Capacity(-10);
+                Console.WriteLine($"{goodsTaken}");
+                double x = vesselhold.Capacity(-10);
+                return x;
             }
             else if (result.Contains(recoverGoods))
             {
                 // +500 creds to wallet
-                vesselhold.playerWallet(500);
+                Console.WriteLine($"{recoverGoods}");
+                double x = vesselhold.playerWallet(500);
+                return x;
             }
             else if (result.Contains(foundPalladium1))
             {
                 // +1 palladium crate
-                vesselhold.palladCrate(1);
+                Console.WriteLine($"{foundPalladium1}");
+                int x = vesselhold.palladCrate(1);
+                return x;
             }
             else if (result.Contains(foundPalladium2))
             {
                 //+1 palladium crate
-                vesselhold.palladCrate(1);
+                Console.WriteLine($"{foundPalladium2}");
+                int x = vesselhold.palladCrate(1);
+                return x;
             }
             else if (result.Contains(hireMate))
             {
                 // -500 creds wallet
-                vesselhold.playerWallet(-500);
+                Console.WriteLine($"{hireMate}");
+                double x = vesselhold.playerWallet(-500);
+                return x;
             }
-            return result;
-
+            return y;
         }
     }  
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RandomEvents;
 
 namespace Planets
 {
@@ -12,6 +13,7 @@ namespace Planets
         TauCeti tauLocation = new TauCeti();
         MiningColony colonyLocation = new MiningColony();
         AlphaCentari centariLocation = new AlphaCentari();
+        Events randomEvent = new Events();
 
         public double EarthtoTauCeti()
         {

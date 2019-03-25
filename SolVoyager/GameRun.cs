@@ -28,7 +28,7 @@ namespace SolVoyager
         {
             string location = "Earth";
             bool check = true;
-            openTitle.CenteredString();
+            openTitle.OpeningTitle();
             // Opening page, with quit or start game option
             // Run Character Creation
             // Into buying your first resource to trade to another system

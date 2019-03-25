@@ -28,7 +28,7 @@ namespace SolVoyager
         {
             string location = "Earth";
             bool check = true;
-            openTitle.CenteredString();
+            openTitle.OpeningTitle();
             // Opening page, with quit or start game option
             // Run Character Creation
             // Into buying your first resource to trade to another system
@@ -61,7 +61,7 @@ namespace SolVoyager
                     // terminate program
                     break;
             }
-            // problem with the inventory system, not maintaining the inventory when moving to a new planet
+            
             while (check == true)
             {
                 Console.Clear();
